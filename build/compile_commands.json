@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/Main.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/Main.cpp.o"
+},
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o"
+},
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o"
+},
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o"
+},
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o"
+},
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o"
+},
+{
+  "directory": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtGui.framework/Headers -g -std=gnu++17 -arch arm64 -o CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp",
+  "file": "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp",
+  "output": "CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o"
+}
+]

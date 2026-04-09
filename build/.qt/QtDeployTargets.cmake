@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_ScheduleGame_FILE /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame)
+set(__QT_DEPLOY_TARGET_ScheduleGame_TYPE EXECUTABLE)

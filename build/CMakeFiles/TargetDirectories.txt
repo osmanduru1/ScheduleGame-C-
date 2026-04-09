@@ -1,0 +1,5 @@
+/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/ScheduleGame.dir
+/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/edit_cache.dir
+/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/rebuild_cache.dir
+/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/ScheduleGame_autogen_timestamp_deps.dir
+/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/ScheduleGame_autogen.dir

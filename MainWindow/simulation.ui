@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SimulationWindow</class>
+ <widget class="QMainWindow" name="SimulationWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>480</width><height>540</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simulation</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text"><string>Simulation Running</string></property>
+      <property name="alignment"><set>Qt::AlignCenter</set></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="currentActivityLabel">
+      <property name="text"><string>Current Activity: —</string></property>
+      <property name="alignment"><set>Qt::AlignCenter</set></property>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QFormLayout" name="statsLayout">
+
+      <item row="0" column="0">
+       <widget class="QLabel"><property name="text"><string>Health:</string></property></widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QProgressBar" name="healthBar">
+        <property name="value"><number>70</number></property>
+       </widget>
+      </item>
+
+      <item row="1" column="0">
+       <widget class="QLabel"><property name="text"><string>Energy:</string></property></widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QProgressBar" name="energyBar">
+        <property name="value"><number>70</number></property>
+       </widget>
+      </item>
+
+      <item row="2" column="0">
+       <widget class="QLabel"><property name="text"><string>Attention:</string></property></widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QProgressBar" name="attentionBar">
+        <property name="value"><number>70</number></property>
+       </widget>
+      </item>
+
+      <item row="3" column="0">
+       <widget class="QLabel"><property name="text"><string>Stress:</string></property></widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QProgressBar" name="stressBar">
+        <property name="value"><number>30</number></property>
+       </widget>
+      </item>
+
+      <item row="4" column="0">
+       <widget class="QLabel"><property name="text"><string>Sleep:</string></property></widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QProgressBar" name="sleepBar">
+        <property name="value"><number>70</number></property>
+       </widget>
+      </item>
+
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="nextActivityButton">
+      <property name="text"><string>Next Activity</string></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="resultLabel">
+      <property name="text"><string></string></property>
+      <property name="alignment"><set>Qt::AlignCenter</set></property>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
