@@ -68,9 +68,21 @@ QString ScheduleBuilderWindow::activityTypeToString(ActivityType type) const
 
 void ScheduleBuilderWindow::onAddActivityClicked()
 {
+    
     QString name = ui->activityNameEdit->text().trimmed();
     QString typeText = ui->activityTypeComboBox->currentText();
     int duration = ui->durationSpinBox->value();
+
+
+    int total = 0;
+    for (const Activity& a : currentSchedule.activities)
+        total += a.duration;
+
+    if (total + duration > 24) {
+        QMessageBox::warning(this, "Invalid Schedule",
+            "Total schedule time cannot exceed 24 hours.");
+        return;
+    }
 
     if (name.isEmpty()) {
         QMessageBox::warning(this, "Missing Activity Name",
