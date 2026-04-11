@@ -47,9 +47,22 @@
      </layout>
     </item>
 
+    <!-- ADD ACTIVITY BUTTON -->
     <item>
      <widget class="QPushButton" name="addActivityButton">
       <property name="text"><string>Add Activity</string></property>
+     </widget>
+    </item>
+
+    <!-- REMAINING HOURS LABEL (NEW) -->
+    <item>
+     <widget class="QLabel" name="remainingHoursLabel">
+      <property name="text">
+       <string>Remaining Hours: 24</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
     </item>
 

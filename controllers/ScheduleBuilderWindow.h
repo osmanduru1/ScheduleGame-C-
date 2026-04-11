@@ -27,6 +27,8 @@ private:
     Ui::ScheduleBuilderWindow *ui;
     Schedule currentSchedule;
     SimulationWindow *simulationWindow;
+    void updateRemainingHours();   // <-- ADD THIS LINE
+
 
     void setupUiData();
     ActivityType stringToActivityType(const QString& typeText) const;

@@ -19,6 +19,8 @@ ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
             this, &ScheduleBuilderWindow::onStartSimulationClicked);
 }
 
+
+
 ScheduleBuilderWindow::~ScheduleBuilderWindow()
 {
     delete simulationWindow;
@@ -95,12 +97,16 @@ void ScheduleBuilderWindow::onAddActivityClicked()
 
     currentSchedule.addActivity(activity);
 
+    
+
     QString displayText = name + " | " + typeText + " | " + QString::number(duration) + " hour(s)";
     ui->activityListWidget->addItem(displayText);
 
     ui->activityNameEdit->clear();
     ui->durationSpinBox->setValue(1);
     ui->activityNameEdit->setFocus();
+
+    
 }
 
 void ScheduleBuilderWindow::onStartSimulationClicked()
@@ -118,4 +124,20 @@ void ScheduleBuilderWindow::onStartSimulationClicked()
 
     simulationWindow = new SimulationWindow(currentSchedule, this);
     simulationWindow->show();
+
+    
+}
+
+void ScheduleBuilderWindow::updateRemainingHours()
+{
+    int total = 0;
+
+    for (const Activity& a : currentSchedule.activities)
+        total += a.duration;
+
+    int remaining = 24 - total;
+
+    ui->remainingHoursLabel->setText(
+        "Remaining Hours: " + QString::number(remaining)
+    );
 }

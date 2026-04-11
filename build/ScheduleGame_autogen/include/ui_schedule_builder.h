@@ -38,6 +38,7 @@ public:
     QLabel *durationLabel;
     QSpinBox *durationSpinBox;
     QPushButton *addActivityButton;
+    QLabel *remainingHoursLabel;
     QLabel *listLabel;
     QListWidget *activityListWidget;
     QPushButton *startSimulationButton;
@@ -97,6 +98,12 @@ public:
 
         verticalLayout->addWidget(addActivityButton);
 
+        remainingHoursLabel = new QLabel(centralwidget);
+        remainingHoursLabel->setObjectName("remainingHoursLabel");
+        remainingHoursLabel->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(remainingHoursLabel);
+
         listLabel = new QLabel(centralwidget);
         listLabel->setObjectName("listLabel");
 
@@ -127,6 +134,7 @@ public:
         typeLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Activity Type:", nullptr));
         durationLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Duration (hours):", nullptr));
         addActivityButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Add Activity", nullptr));
+        remainingHoursLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Remaining Hours: 24", nullptr));
         listLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Your Schedule:", nullptr));
         startSimulationButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Start Simulation", nullptr));
     } // retranslateUi
