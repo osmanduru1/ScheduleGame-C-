@@ -16,6 +16,7 @@ SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
     ui->sleepBar->setRange(0, 100);
 
     ui->resultLabel->setText("");
+
     updateStatsDisplay();
     updateActivityDisplay();
 
@@ -40,14 +41,19 @@ void SimulationWindow::updateStatsDisplay()
 void SimulationWindow::updateActivityDisplay()
 {
     if (currentIndex < static_cast<int>(schedule.activities.size())) {
+
         const Activity& activity = schedule.activities[currentIndex];
 
-        QString text = "Current Activity: "
-                     + QString::fromStdString(activity.name)
-                     + " (" + QString::number(activity.duration) + " hour(s))";
+        QString text =
+            "Current Activity: "
+            + QString::fromStdString(activity.name)
+            + " (" + QString::number(activity.startHour)
+            + ":00 - "
+            + QString::number(activity.endHour) + ":00)";
 
         ui->currentActivityLabel->setText(text);
-    } else {
+    }
+    else {
         ui->currentActivityLabel->setText("No more activities.");
     }
 }
@@ -66,23 +72,28 @@ void SimulationWindow::onNextActivityClicked()
     }
 
     const Activity& activity = schedule.activities[currentIndex];
+
     engine.runActivity(stats, activity);
 
     updateStatsDisplay();
 
     if (!stats.isAlive()) {
+
         finishSimulation("Your stats dropped too low. You lost the simulation.");
+
         ui->currentActivityLabel->setText(
-            "Failed during: " + QString::fromStdString(activity.name)
-        );
+            "Failed during: " + QString::fromStdString(activity.name));
+
         return;
     }
 
     currentIndex++;
 
     if (currentIndex >= static_cast<int>(schedule.activities.size())) {
+
         ui->currentActivityLabel->setText("Schedule complete.");
         finishSimulation("You survived the full schedule. You win!");
+
         return;
     }
 

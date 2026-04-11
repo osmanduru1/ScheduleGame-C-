@@ -15,7 +15,8 @@ class Activity {
 public:
     std::string name;
     ActivityType type;
-    int duration;
+    int startHour;
+    int endHour;
 
-    Activity(std::string name, ActivityType type, int duration);
+    Activity(std::string name, ActivityType type, int startHour, int endHour);
 };

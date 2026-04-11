@@ -35,8 +35,10 @@ public:
     QLineEdit *activityNameEdit;
     QLabel *typeLabel;
     QComboBox *activityTypeComboBox;
-    QLabel *durationLabel;
-    QSpinBox *durationSpinBox;
+    QLabel *startLabel;
+    QSpinBox *startHourSpinBox;
+    QLabel *endLabel;
+    QSpinBox *endHourSpinBox;
     QPushButton *addActivityButton;
     QLabel *remainingHoursLabel;
     QLabel *listLabel;
@@ -80,15 +82,29 @@ public:
 
         formLayout->setWidget(1, QFormLayout::ItemRole::FieldRole, activityTypeComboBox);
 
-        durationLabel = new QLabel(centralwidget);
-        durationLabel->setObjectName("durationLabel");
+        startLabel = new QLabel(centralwidget);
+        startLabel->setObjectName("startLabel");
 
-        formLayout->setWidget(2, QFormLayout::ItemRole::LabelRole, durationLabel);
+        formLayout->setWidget(2, QFormLayout::ItemRole::LabelRole, startLabel);
 
-        durationSpinBox = new QSpinBox(centralwidget);
-        durationSpinBox->setObjectName("durationSpinBox");
+        startHourSpinBox = new QSpinBox(centralwidget);
+        startHourSpinBox->setObjectName("startHourSpinBox");
+        startHourSpinBox->setMinimum(0);
+        startHourSpinBox->setMaximum(23);
 
-        formLayout->setWidget(2, QFormLayout::ItemRole::FieldRole, durationSpinBox);
+        formLayout->setWidget(2, QFormLayout::ItemRole::FieldRole, startHourSpinBox);
+
+        endLabel = new QLabel(centralwidget);
+        endLabel->setObjectName("endLabel");
+
+        formLayout->setWidget(3, QFormLayout::ItemRole::LabelRole, endLabel);
+
+        endHourSpinBox = new QSpinBox(centralwidget);
+        endHourSpinBox->setObjectName("endHourSpinBox");
+        endHourSpinBox->setMinimum(1);
+        endHourSpinBox->setMaximum(24);
+
+        formLayout->setWidget(3, QFormLayout::ItemRole::FieldRole, endHourSpinBox);
 
 
         verticalLayout->addLayout(formLayout);
@@ -132,7 +148,8 @@ public:
         titleLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Build Your Schedule", nullptr));
         nameLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Activity Name:", nullptr));
         typeLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Activity Type:", nullptr));
-        durationLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Duration (hours):", nullptr));
+        startLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Start Hour:", nullptr));
+        endLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "End Hour:", nullptr));
         addActivityButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Add Activity", nullptr));
         remainingHoursLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Remaining Hours: 24", nullptr));
         listLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Your Schedule:", nullptr));

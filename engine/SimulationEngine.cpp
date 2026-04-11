@@ -2,10 +2,10 @@
 
 void SimulationEngine::runActivity(Stats& stats, const Activity& activity)
 {
-    int h = activity.duration;
+    int h = activity.endHour - activity.startHour;
 
-    switch (activity.type) {
-
+    switch (activity.type)
+    {
         case ActivityType::Class:
             stats.energy -= 5 * h;
             stats.attention -= 7 * h;

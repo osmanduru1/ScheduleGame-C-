@@ -17,9 +17,9 @@ ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
 
     connect(ui->startSimulationButton, &QPushButton::clicked,
             this, &ScheduleBuilderWindow::onStartSimulationClicked);
+
+    updateRemainingHours();
 }
-
-
 
 ScheduleBuilderWindow::~ScheduleBuilderWindow()
 {
@@ -37,9 +37,7 @@ void ScheduleBuilderWindow::setupUiData()
     ui->activityTypeComboBox->addItem("Exercise");
     ui->activityTypeComboBox->addItem("Break");
 
-    ui->durationSpinBox->setMinimum(1);
-    ui->durationSpinBox->setMaximum(12);
-    ui->durationSpinBox->setValue(1);
+
 }
 
 ActivityType ScheduleBuilderWindow::stringToActivityType(const QString& typeText) const
@@ -50,6 +48,7 @@ ActivityType ScheduleBuilderWindow::stringToActivityType(const QString& typeText
     if (typeText == "Meal") return ActivityType::Meal;
     if (typeText == "Sleep") return ActivityType::Sleep;
     if (typeText == "Exercise") return ActivityType::Exercise;
+
     return ActivityType::Break;
 }
 
@@ -70,21 +69,16 @@ QString ScheduleBuilderWindow::activityTypeToString(ActivityType type) const
 
 void ScheduleBuilderWindow::onAddActivityClicked()
 {
-    
     QString name = ui->activityNameEdit->text().trimmed();
     QString typeText = ui->activityTypeComboBox->currentText();
-    int duration = ui->durationSpinBox->value();
+    int start = ui->startHourSpinBox->value();
+    int end = ui->endHourSpinBox->value();
 
-
-    int total = 0;
-    for (const Activity& a : currentSchedule.activities)
-        total += a.duration;
-
-    if (total + duration > 24) {
-        QMessageBox::warning(this, "Invalid Schedule",
-            "Total schedule time cannot exceed 24 hours.");
+    if (end <= start) {
+        QMessageBox::warning(this, "Invalid Time",
+                            "End hour must be after start hour.");
         return;
-    }
+    }    
 
     if (name.isEmpty()) {
         QMessageBox::warning(this, "Missing Activity Name",
@@ -92,21 +86,33 @@ void ScheduleBuilderWindow::onAddActivityClicked()
         return;
     }
 
+    int total = 0;
+    for (const Activity& a : currentSchedule.activities)
+    total += (a.endHour - a.startHour);
+
+    int duration = end - start;
+
+    if (total + duration > 24) {
+        QMessageBox::warning(this, "Invalid Schedule",
+                            "Total schedule time cannot exceed 24 hours.");
+        return;
+    }
+
     ActivityType type = stringToActivityType(typeText);
-    Activity activity(name.toStdString(), type, duration);
+    Activity activity(name.toStdString(), type, start, end);
 
     currentSchedule.addActivity(activity);
 
-    
+    QString displayText =
+        name + " | " + typeText +
+        " | " + QString::number(start) + ":00 - " + QString::number(end) + ":00" + " hour(s)";
 
-    QString displayText = name + " | " + typeText + " | " + QString::number(duration) + " hour(s)";
     ui->activityListWidget->addItem(displayText);
 
-    ui->activityNameEdit->clear();
-    ui->durationSpinBox->setValue(1);
-    ui->activityNameEdit->setFocus();
+    updateRemainingHours();
 
-    
+    ui->activityNameEdit->clear();
+    ui->activityNameEdit->setFocus();
 }
 
 void ScheduleBuilderWindow::onStartSimulationClicked()
@@ -124,8 +130,6 @@ void ScheduleBuilderWindow::onStartSimulationClicked()
 
     simulationWindow = new SimulationWindow(currentSchedule, this);
     simulationWindow->show();
-
-    
 }
 
 void ScheduleBuilderWindow::updateRemainingHours()
@@ -133,11 +137,10 @@ void ScheduleBuilderWindow::updateRemainingHours()
     int total = 0;
 
     for (const Activity& a : currentSchedule.activities)
-        total += a.duration;
+    total += (a.endHour - a.startHour);
 
     int remaining = 24 - total;
 
     ui->remainingHoursLabel->setText(
-        "Remaining Hours: " + QString::number(remaining)
-    );
+        "Remaining Hours: " + QString::number(remaining));
 }

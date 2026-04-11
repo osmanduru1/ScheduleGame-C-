@@ -23,7 +23,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -46,7 +46,7 @@ events:
       - "/opt/homebrew/bin/uname"
       - "/opt/homebrew/opt/binutils/bin/uname"
       - "/opt/homebrew/opt/ruby/bin/uname"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/uname"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/uname"
       - "/Users/hd/.gem/bin/uname"
       - "/Users/hd/Development/flutter/bin/uname"
       - "/opt/homebrew/sbin/uname"
@@ -117,7 +117,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -140,7 +140,7 @@ events:
       - "/opt/homebrew/bin/gmake"
       - "/opt/homebrew/opt/binutils/bin/gmake"
       - "/opt/homebrew/opt/ruby/bin/gmake"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/gmake"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/gmake"
       - "/Users/hd/.gem/bin/gmake"
       - "/Users/hd/Development/flutter/bin/gmake"
       - "/opt/homebrew/sbin/gmake"
@@ -162,7 +162,7 @@ events:
       - "/opt/homebrew/bin/make"
       - "/opt/homebrew/opt/binutils/bin/make"
       - "/opt/homebrew/opt/ruby/bin/make"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/make"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/make"
       - "/Users/hd/.gem/bin/make"
       - "/Users/hd/Development/flutter/bin/make"
       - "/opt/homebrew/sbin/make"
@@ -171,6 +171,92 @@ events:
       - "/usr/local/bin/make"
       - "/System/Cryptexes/App/usr/bin/make"
     found: "/usr/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/opt/homebrew/opt/ruby/bin"
+        - " PATH=/opt/homebrew/opt/ruby/bin"
+        - "/Users/hd/.gem/bin"
+        - "/Users/hd/Development/flutter/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/hd/.gem/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/opt/homebrew/opt/ruby/bin"
+        - " PATH=/opt/homebrew/opt/ruby/bin"
+        - "/Users/hd/Development/flutter/bin"
+        - "/Users/hd/Library/Android/sdk/platform-tools"
+        - "/Users/hd/.pub-cache/bin"
+        - "/Users/hd/.pub-cache/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:67 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/.gem/bin/"
+      - "/Users/hd/Development/flutter/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/hd/Library/Android/sdk/platform-tools/"
+      - "/Users/hd/.pub-cache/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/clang"
+      - "/opt/homebrew/opt/binutils/bin/clang"
+      - "/opt/homebrew/opt/ruby/bin/clang"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/clang"
+      - "/Users/hd/.gem/bin/clang"
+      - "/Users/hd/Development/flutter/bin/clang"
+      - "/opt/homebrew/sbin/clang"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang"
+      - "/usr/local/bin/clang"
+      - "/System/Cryptexes/App/usr/bin/clang"
+    found: "/usr/bin/clang"
     search_context:
       ENV{PATH}:
         - "/opt/homebrew/bin"
@@ -337,7 +423,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -411,7 +497,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -485,7 +571,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -559,7 +645,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -633,7 +719,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -707,7 +793,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -781,7 +867,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -858,7 +944,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -935,7 +1021,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -1012,7 +1098,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -1089,7 +1175,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -1112,7 +1198,7 @@ events:
       - "/opt/homebrew/bin/tapi"
       - "/opt/homebrew/opt/binutils/bin/tapi"
       - "/opt/homebrew/opt/ruby/bin/tapi"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/tapi"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/tapi"
       - "/Users/hd/.gem/bin/tapi"
       - "/Users/hd/Development/flutter/bin/tapi"
       - "/opt/homebrew/sbin/tapi"
@@ -1131,6 +1217,92 @@ events:
       - "/Users/hd/Library/Android/sdk/platform-tools/tapi"
       - "/Users/hd/.pub-cache/bin/tapi"
     found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/opt/homebrew/opt/ruby/bin"
+        - " PATH=/opt/homebrew/opt/ruby/bin"
+        - "/Users/hd/.gem/bin"
+        - "/Users/hd/Development/flutter/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/hd/.gem/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/opt/homebrew/opt/ruby/bin"
+        - " PATH=/opt/homebrew/opt/ruby/bin"
+        - "/Users/hd/Development/flutter/bin"
+        - "/Users/hd/Library/Android/sdk/platform-tools"
+        - "/Users/hd/.pub-cache/bin"
+        - "/Users/hd/.pub-cache/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:71 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang++"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/.gem/bin/"
+      - "/Users/hd/Development/flutter/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/hd/Library/Android/sdk/platform-tools/"
+      - "/Users/hd/.pub-cache/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/clang++"
+      - "/opt/homebrew/opt/binutils/bin/clang++"
+      - "/opt/homebrew/opt/ruby/bin/clang++"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/clang++"
+      - "/Users/hd/.gem/bin/clang++"
+      - "/Users/hd/Development/flutter/bin/clang++"
+      - "/opt/homebrew/sbin/clang++"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang++"
+      - "/Users/hd/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang++"
+      - "/usr/local/bin/clang++"
+      - "/System/Cryptexes/App/usr/bin/clang++"
+    found: "/usr/bin/clang++"
     search_context:
       ENV{PATH}:
         - "/opt/homebrew/bin"
@@ -1296,7 +1468,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -1319,7 +1491,7 @@ events:
       - "/opt/homebrew/bin/install_name_tool"
       - "/opt/homebrew/opt/binutils/bin/install_name_tool"
       - "/opt/homebrew/opt/ruby/bin/install_name_tool"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/install_name_tool"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/install_name_tool"
       - "/Users/hd/.gem/bin/install_name_tool"
       - "/Users/hd/Development/flutter/bin/install_name_tool"
       - "/opt/homebrew/sbin/install_name_tool"
@@ -1369,8 +1541,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4"
-      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4"
+      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL"
+      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -1383,18 +1555,18 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4'
+        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a5ed2/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a5ed2.dir/build.make CMakeFiles/cmTC_a5ed2.dir/build
-        Building C object CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o
-        /usr/bin/clang   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_79e95/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_79e95.dir/build.make CMakeFiles/cmTC_79e95.dir/build
+        Building C object CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 16.0.0 (clang-1600.0.26.6)
         Target: arm64-apple-darwin25.3.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin25.3.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -1406,13 +1578,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_a5ed2
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5ed2.dir/link.txt --verbose=1
+        Linking C executable cmTC_79e95
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79e95.dir/link.txt --verbose=1
         Apple clang version 16.0.0 (clang-1600.0.26.6)
         Target: arm64-apple-darwin25.3.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_a5ed2 -L/usr/local/lib -v CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_79e95 -L/usr/local/lib -v CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1115.7.3
         BUILD 23:52:02 Dec  5 2024
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1425,7 +1597,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/clang  -arch arm64  -v -Wl,-v CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -o cmTC_a5ed2
+        /usr/bin/clang  -arch arm64  -v -Wl,-v CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -o cmTC_79e95
         
       exitCode: 0
   -
@@ -1467,18 +1639,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4']
+        ignore line: [Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a5ed2/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a5ed2.dir/build.make CMakeFiles/cmTC_a5ed2.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/clang   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_79e95/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_79e95.dir/build.make CMakeFiles/cmTC_79e95.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/clang   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
         ignore line: [Target: arm64-apple-darwin25.3.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-TMCJJ4 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-kHeakL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin25.3.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1490,13 +1662,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_a5ed2]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5ed2.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_79e95]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79e95.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
         ignore line: [Target: arm64-apple-darwin25.3.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_a5ed2 -L/usr/local/lib -v CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_79e95 -L/usr/local/lib -v CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1513,10 +1685,10 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_a5ed2] ==> ignore
+          arg [cmTC_79e95] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_a5ed2.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_79e95.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
         linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -1559,8 +1731,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF"
-      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF"
+      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr"
+      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1574,19 +1746,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF'
+        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_004a7/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_004a7.dir/build.make CMakeFiles/cmTC_004a7.dir/build
-        Building CXX object CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_76dda/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_76dda.dir/build.make CMakeFiles/cmTC_76dda.dir/build
+        Building CXX object CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 16.0.0 (clang-1600.0.26.6)
         Target: arm64-apple-darwin25.3.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin25.3.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -1599,13 +1771,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_004a7
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_004a7.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_76dda
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76dda.dir/link.txt --verbose=1
         Apple clang version 16.0.0 (clang-1600.0.26.6)
         Target: arm64-apple-darwin25.3.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_004a7 -L/usr/local/lib -v CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_76dda -L/usr/local/lib -v CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1115.7.3
         BUILD 23:52:02 Dec  5 2024
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1618,7 +1790,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/clang++  -arch arm64  -v -Wl,-v CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_004a7
+        /usr/bin/clang++  -arch arm64  -v -Wl,-v CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_76dda
         
       exitCode: 0
   -
@@ -1662,19 +1834,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF']
+        ignore line: [Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_004a7/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_004a7.dir/build.make CMakeFiles/cmTC_004a7.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_76dda/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_76dda.dir/build.make CMakeFiles/cmTC_76dda.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
         ignore line: [Target: arm64-apple-darwin25.3.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-Z3fjpF -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-G3Zfpr -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin25.3.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1687,13 +1859,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_004a7]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_004a7.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_76dda]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76dda.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
         ignore line: [Target: arm64-apple-darwin25.3.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_004a7 -L/usr/local/lib -v CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.2.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_76dda -L/usr/local/lib -v CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1710,10 +1882,10 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_004a7] ==> ignore
+          arg [cmTC_76dda] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_004a7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_76dda.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
@@ -1764,8 +1936,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-ivoSki"
-      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-ivoSki"
+      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-JUJijv"
+      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-JUJijv"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -1779,15 +1951,15 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-ivoSki'
+        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-JUJijv'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c16bd/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c16bd.dir/build.make CMakeFiles/cmTC_c16bd.dir/build
-        Building C object CMakeFiles/cmTC_c16bd.dir/src.c.o
-        /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -MD -MT CMakeFiles/cmTC_c16bd.dir/src.c.o -MF CMakeFiles/cmTC_c16bd.dir/src.c.o.d -o CMakeFiles/cmTC_c16bd.dir/src.c.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-ivoSki/src.c
-        Linking C executable cmTC_c16bd
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c16bd.dir/link.txt --verbose=1
-        /usr/bin/clang  -arch arm64 CMakeFiles/cmTC_c16bd.dir/src.c.o -o cmTC_c16bd
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_16a66/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_16a66.dir/build.make CMakeFiles/cmTC_16a66.dir/build
+        Building C object CMakeFiles/cmTC_16a66.dir/src.c.o
+        /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -MD -MT CMakeFiles/cmTC_16a66.dir/src.c.o -MF CMakeFiles/cmTC_16a66.dir/src.c.o.d -o CMakeFiles/cmTC_16a66.dir/src.c.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-JUJijv/src.c
+        Linking C executable cmTC_16a66
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16a66.dir/link.txt --verbose=1
+        /usr/bin/clang  -arch arm64 CMakeFiles/cmTC_16a66.dir/src.c.o -o cmTC_16a66
         
       exitCode: 0
   -
@@ -2336,8 +2508,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-LHx0pa"
-      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-LHx0pa"
+      source: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-V8t2zq"
+      binary: "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-V8t2zq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2351,15 +2523,15 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-LHx0pa'
+        Change Dir: '/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-V8t2zq'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b46c4/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b46c4.dir/build.make CMakeFiles/cmTC_b46c4.dir/build
-        Building CXX object CMakeFiles/cmTC_b46c4.dir/src.cxx.o
-        /usr/bin/clang++ -DHAVE_STDATOMIC  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_b46c4.dir/src.cxx.o -MF CMakeFiles/cmTC_b46c4.dir/src.cxx.o.d -o CMakeFiles/cmTC_b46c4.dir/src.cxx.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-LHx0pa/src.cxx
-        Linking CXX executable cmTC_b46c4
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b46c4.dir/link.txt --verbose=1
-        /usr/bin/clang++  -arch arm64 CMakeFiles/cmTC_b46c4.dir/src.cxx.o -o cmTC_b46c4
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c4183/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c4183.dir/build.make CMakeFiles/cmTC_c4183.dir/build
+        Building CXX object CMakeFiles/cmTC_c4183.dir/src.cxx.o
+        /usr/bin/clang++ -DHAVE_STDATOMIC  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_c4183.dir/src.cxx.o -MF CMakeFiles/cmTC_c4183.dir/src.cxx.o.d -o CMakeFiles/cmTC_c4183.dir/src.cxx.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles/CMakeScratch/TryCompile-V8t2zq/src.cxx
+        Linking CXX executable cmTC_c4183
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4183.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 CMakeFiles/cmTC_c4183.dir/src.cxx.o -o cmTC_c4183
         
       exitCode: 0
   -
@@ -2392,7 +2564,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -2951,7 +3123,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -3003,7 +3175,7 @@ events:
       - "/opt/homebrew/bin/OpenGL.framework/Headers/gl.h"
       - "/opt/homebrew/opt/binutils/bin/OpenGL.framework/Headers/gl.h"
       - "/opt/homebrew/opt/ruby/bin/OpenGL.framework/Headers/gl.h"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/OpenGL.framework/Headers/gl.h"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/OpenGL.framework/Headers/gl.h"
       - "/Users/hd/.gem/bin/OpenGL.framework/Headers/gl.h"
       - "/Users/hd/Development/flutter/bin/OpenGL.framework/Headers/gl.h"
       - "/opt/homebrew/sbin/OpenGL.framework/Headers/gl.h"
@@ -3138,7 +3310,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -3190,7 +3362,7 @@ events:
       - "/opt/homebrew/bin/OpenGL.framework/Headers/glu.h"
       - "/opt/homebrew/opt/binutils/bin/OpenGL.framework/Headers/glu.h"
       - "/opt/homebrew/opt/ruby/bin/OpenGL.framework/Headers/glu.h"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/OpenGL.framework/Headers/glu.h"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/OpenGL.framework/Headers/glu.h"
       - "/Users/hd/.gem/bin/OpenGL.framework/Headers/glu.h"
       - "/Users/hd/Development/flutter/bin/OpenGL.framework/Headers/glu.h"
       - "/opt/homebrew/sbin/OpenGL.framework/Headers/glu.h"
@@ -3322,7 +3494,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -3374,7 +3546,7 @@ events:
       - "/opt/homebrew/bin/vulkan.framework/Headers/vulkan.h"
       - "/opt/homebrew/opt/binutils/bin/vulkan.framework/Headers/vulkan.h"
       - "/opt/homebrew/opt/ruby/bin/vulkan.framework/Headers/vulkan.h"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/vulkan.framework/Headers/vulkan.h"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/vulkan.framework/Headers/vulkan.h"
       - "/Users/hd/.gem/bin/vulkan.framework/Headers/vulkan.h"
       - "/Users/hd/Development/flutter/bin/vulkan.framework/Headers/vulkan.h"
       - "/opt/homebrew/sbin/vulkan.framework/Headers/vulkan.h"
@@ -3425,7 +3597,7 @@ events:
       - "/opt/homebrew/bin/vulkan/vulkan.h"
       - "/opt/homebrew/opt/binutils/bin/vulkan/vulkan.h"
       - "/opt/homebrew/opt/ruby/bin/vulkan/vulkan.h"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/vulkan/vulkan.h"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/vulkan/vulkan.h"
       - "/Users/hd/.gem/bin/vulkan/vulkan.h"
       - "/Users/hd/Development/flutter/bin/vulkan/vulkan.h"
       - "/opt/homebrew/sbin/vulkan/vulkan.h"
@@ -3709,7 +3881,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -3765,7 +3937,7 @@ events:
       - "/opt/homebrew/bin/glslc"
       - "/opt/homebrew/opt/binutils/bin/glslc"
       - "/opt/homebrew/opt/ruby/bin/glslc"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/glslc"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/glslc"
       - "/Users/hd/.gem/bin/glslc"
       - "/Users/hd/Development/flutter/bin/glslc"
       - "/opt/homebrew/sbin/glslc"
@@ -3900,7 +4072,7 @@ events:
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/opt/binutils/bin/"
       - "/opt/homebrew/opt/ruby/bin/"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/"
       - "/Users/hd/.gem/bin/"
       - "/Users/hd/Development/flutter/bin/"
       - "/opt/homebrew/sbin/"
@@ -3956,7 +4128,7 @@ events:
       - "/opt/homebrew/bin/glslangValidator"
       - "/opt/homebrew/opt/binutils/bin/glslangValidator"
       - "/opt/homebrew/opt/ruby/bin/glslangValidator"
-      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ PATH=/opt/homebrew/opt/ruby/bin/glslangValidator"
+      - "/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/ PATH=/opt/homebrew/opt/ruby/bin/glslangValidator"
       - "/Users/hd/.gem/bin/glslangValidator"
       - "/Users/hd/Development/flutter/bin/glslangValidator"
       - "/opt/homebrew/sbin/glslangValidator"
