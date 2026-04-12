@@ -8,6 +8,8 @@
 
 class SimulationEngine {
 public:
+
     void runActivity(Stats& stats, const Activity& activity);
-    QString runRandomEvent(Stats& stats);
+
+    QString runRandomEvent(Stats& stats, const Activity& activity);
 };

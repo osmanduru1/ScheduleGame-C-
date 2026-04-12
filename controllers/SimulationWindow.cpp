@@ -136,7 +136,7 @@ void SimulationWindow::onNextActivityClicked()
 
     engine.runActivity(stats, activity);
 
-    QString eventMessage = engine.runRandomEvent(stats);
+    QString eventMessage = engine.runRandomEvent(stats, activity);
 
     if (!eventMessage.isEmpty())
     {

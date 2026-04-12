@@ -4,28 +4,75 @@
 #include <vector>
 #include <cstdlib>
 
-
-std::vector<RandomEvent> events =
+std::vector<RandomEvent> classEvents =
 {
-    {"Coffee break! Energy +10", 0, 10, 0, 0, 0, 10},
-
-    {"Unexpected assignment. Stress +10", 0, 0, 0, 10, 0, 10},
-
-    {"Quick nap. Energy +8 Sleep +5", 0, 8, 0, 0, 5, 8},
-
-    {"Phone distraction. Attention -8", 0, 0, -8, 0, 0, 8},
-
-    {"Workout motivation! Health +5 Stress -3", 5, 0, 0, -3, 0, 6}
+    {"Surprise quiz! Stress +12 Attention -6", 0, 0, -6, 12, 0, 8},
+    {"Interesting lecture! Attention +10", 0, 0, 10, 0, 0, 6},
+    {"You doze off in class. Attention -10", 0, 0, -10, 0, 0, 6}
 };
 
-
-QString SimulationEngine::runRandomEvent(Stats& stats)
+std::vector<RandomEvent> studyEvents =
 {
-    int roll = rand() % 100;
+    {"Productive study session! Attention +8", 0, 0, 8, 0, 0, 7},
+    {"You procrastinate on your phone. Attention -8", 0, 0, -8, 0, 0, 7},
+    {"You understand the material! Stress -5", 0, 0, 0, -5, 0, 6}
+};
 
+std::vector<RandomEvent> workEvents =
+{
+    {"Difficult customer! Stress +10", 0, 0, 0, 10, 0, 7},
+    {"Easy shift today. Stress -5", 0, 0, 0, -5, 0, 6}
+};
+
+std::vector<RandomEvent> sleepEvents =
+{
+    {"Deep sleep! Energy +10", 0, 10, 0, 0, 5, 7},
+    {"Nightmare! Stress +8", 0, 0, 0, 8, 0, 6}
+};
+
+std::vector<RandomEvent> breakEvents =
+{
+    {"Coffee break! Energy +10", 0, 10, 0, 0, 0, 7},
+    {"Relaxing moment. Stress -5", 0, 0, 0, -5, 0, 6}
+};
+
+QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
+{
+    std::vector<RandomEvent>* eventList = nullptr;
+
+    switch (activity.type)
+    {
+        case ActivityType::Class:
+            eventList = &classEvents;
+            break;
+
+        case ActivityType::Study:
+            eventList = &studyEvents;
+            break;
+
+        case ActivityType::Work:
+            eventList = &workEvents;
+            break;
+
+        case ActivityType::Sleep:
+            eventList = &sleepEvents;
+            break;
+
+        case ActivityType::Break:
+            eventList = &breakEvents;
+            break;
+
+        default:
+            return "";
+    }
+
+    if (eventList->empty())
+        return "";
+
+    int roll = rand() % 100;
     int cumulative = 0;
 
-    for (const RandomEvent& event : events)
+    for (const RandomEvent& event : *eventList)
     {
         cumulative += event.probability;
 
