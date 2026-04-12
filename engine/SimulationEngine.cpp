@@ -1,4 +1,6 @@
 #include "SimulationEngine.h"
+#include <cstdlib>
+#include <ctime>
 
 void SimulationEngine::runActivity(Stats& stats, const Activity& activity)
 {

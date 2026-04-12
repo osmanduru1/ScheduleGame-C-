@@ -1,6 +1,9 @@
 #include "SimulationWindow.h"
 #include "ui_simulation.h"
 
+#include <cstdlib>
+#include <ctime>
+
 SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::SimulationWindow),
@@ -14,6 +17,8 @@ SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
     ui->attentionBar->setRange(0, 100);
     ui->stressBar->setRange(0, 100);
     ui->sleepBar->setRange(0, 100);
+
+    srand(time(nullptr));
 
     ui->resultLabel->setText("");
 
@@ -130,6 +135,24 @@ void SimulationWindow::onNextActivityClicked()
 
     engine.runActivity(stats, activity);
 
+    QString eventMessage = "";
+
+    int event = rand() % 10;
+
+    if (event == 0)
+    {
+        stats.energy += 10;
+        eventMessage = "Random Event: You grabbed a coffee. Energy +10.";
+    }
+    else if (event == 1)
+    {
+        stats.stress += 10;
+        stats.attention -= 5;
+        eventMessage = "Random Event: Unexpected problem! Stress +10, Attention -5.";
+    }
+
+    stats.clamp();
+
     updateStatsDisplay();
 
     if (!stats.isAlive()) {
@@ -147,10 +170,17 @@ void SimulationWindow::onNextActivityClicked()
     if (currentIndex >= static_cast<int>(schedule.activities.size())) {
 
         ui->currentActivityLabel->setText("Schedule complete.");
+
+        if (!eventMessage.isEmpty())
+            ui->resultLabel->setText(eventMessage);
+
         finishSimulation("You survived the full schedule. You win!");
 
         return;
     }
 
     updateActivityDisplay();
+
+    if (!eventMessage.isEmpty())
+        ui->resultLabel->setText(eventMessage);
 }
