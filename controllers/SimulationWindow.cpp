@@ -22,6 +22,9 @@ SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
 
     connect(ui->nextActivityButton, &QPushButton::clicked,
             this, &SimulationWindow::onNextActivityClicked);
+
+    connect(ui->restartButton, &QPushButton::clicked,
+        this, &SimulationWindow::onRestartClicked);
 }
 
 SimulationWindow::~SimulationWindow()
@@ -58,10 +61,62 @@ void SimulationWindow::updateActivityDisplay()
     }
 }
 
+void SimulationWindow::onRestartClicked()
+{
+    this->close();
+}
+
 void SimulationWindow::finishSimulation(const QString& message)
 {
-    ui->resultLabel->setText(message);
     ui->nextActivityButton->setEnabled(false);
+
+    int score =
+        stats.health +
+        stats.energy +
+        stats.attention +
+        stats.sleep -
+        stats.stress;
+
+    QString rating;
+
+    if (score > 300)
+        rating = "Excellent schedule.";
+    else if (score > 200)
+        rating = "Good schedule.";
+    else if (score > 150)
+        rating = "Risky schedule.";
+    else
+        rating = "Unsustainable schedule.";
+
+    QString suggestions;
+
+    if (stats.sleep < 40)
+        suggestions += "• You should add more sleep.\n";
+
+    if (stats.energy < 40)
+        suggestions += "• Your schedule drains too much energy.\n";
+
+    if (stats.stress > 70)
+        suggestions += "• Your schedule causes too much stress.\n";
+
+    if (stats.attention < 40)
+        suggestions += "• Consider adding breaks.\n";
+
+    if (suggestions.isEmpty())
+        suggestions = "No major issues detected.";
+
+    QString report =
+        message + "\n\n"
+        "Final Stats\n"
+        "Health: " + QString::number(stats.health) + "\n"
+        "Energy: " + QString::number(stats.energy) + "\n"
+        "Attention: " + QString::number(stats.attention) + "\n"
+        "Stress: " + QString::number(stats.stress) + "\n"
+        "Sleep: " + QString::number(stats.sleep) + "\n\n"
+        "Schedule Rating: " + rating + "\n\n"
+        "Suggestions:\n" + suggestions;
+
+    ui->resultLabel->setText(report);
 }
 
 void SimulationWindow::onNextActivityClicked()

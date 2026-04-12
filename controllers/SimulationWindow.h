@@ -21,6 +21,7 @@ public:
 
 private slots:
     void onNextActivityClicked();
+    void onRestartClicked();
 
 private:
     Ui::SimulationWindow *ui;

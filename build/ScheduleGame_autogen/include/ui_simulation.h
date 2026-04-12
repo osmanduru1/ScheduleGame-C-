@@ -40,6 +40,7 @@ public:
     QLabel *label4;
     QProgressBar *sleepBar;
     QPushButton *nextActivityButton;
+    QPushButton *restartButton;
     QLabel *resultLabel;
 
     void setupUi(QMainWindow *SimulationWindow)
@@ -128,6 +129,11 @@ public:
 
         verticalLayout->addWidget(nextActivityButton);
 
+        restartButton = new QPushButton(centralwidget);
+        restartButton->setObjectName("restartButton");
+
+        verticalLayout->addWidget(restartButton);
+
         resultLabel = new QLabel(centralwidget);
         resultLabel->setObjectName("resultLabel");
         resultLabel->setAlignment(Qt::AlignCenter);
@@ -152,6 +158,7 @@ public:
         label3->setText(QCoreApplication::translate("SimulationWindow", "Stress:", nullptr));
         label4->setText(QCoreApplication::translate("SimulationWindow", "Sleep:", nullptr));
         nextActivityButton->setText(QCoreApplication::translate("SimulationWindow", "Next Activity", nullptr));
+        restartButton->setText(QCoreApplication::translate("SimulationWindow", "Back to Schedule Builder", nullptr));
         resultLabel->setText(QString());
     } // retranslateUi
 

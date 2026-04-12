@@ -83,6 +83,14 @@
     </item>
 
     <item>
+    <widget class="QPushButton" name="restartButton">
+    <property name="text">
+    <string>Back to Schedule Builder</string>
+    </property>
+    </widget>
+    </item>
+
+    <item>
      <widget class="QLabel" name="resultLabel">
       <property name="text"><string></string></property>
       <property name="alignment"><set>Qt::AlignCenter</set></property>
