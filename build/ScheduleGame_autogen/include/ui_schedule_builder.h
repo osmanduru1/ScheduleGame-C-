@@ -43,6 +43,7 @@ public:
     QLabel *remainingHoursLabel;
     QLabel *listLabel;
     QListWidget *activityListWidget;
+    QPushButton *deleteActivityButton;
     QPushButton *startSimulationButton;
 
     void setupUi(QMainWindow *ScheduleBuilderWindow)
@@ -130,6 +131,11 @@ public:
 
         verticalLayout->addWidget(activityListWidget);
 
+        deleteActivityButton = new QPushButton(centralwidget);
+        deleteActivityButton->setObjectName("deleteActivityButton");
+
+        verticalLayout->addWidget(deleteActivityButton);
+
         startSimulationButton = new QPushButton(centralwidget);
         startSimulationButton->setObjectName("startSimulationButton");
 
@@ -153,6 +159,7 @@ public:
         addActivityButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Add Activity", nullptr));
         remainingHoursLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Remaining Hours: 24", nullptr));
         listLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Your Schedule:", nullptr));
+        deleteActivityButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Delete Selected Activity", nullptr));
         startSimulationButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Start Simulation", nullptr));
     } // retranslateUi
 

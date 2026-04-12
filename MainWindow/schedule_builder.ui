@@ -138,6 +138,14 @@
      <widget class="QListWidget" name="activityListWidget"/>
     </item>
 
+    <item>
+        <widget class="QPushButton" name="deleteActivityButton">
+            <property name="text">
+                <string>Delete Selected Activity</string>
+            </property>
+        </widget>
+    </item>
+
 
     <item>
      <widget class="QPushButton" name="startSimulationButton">

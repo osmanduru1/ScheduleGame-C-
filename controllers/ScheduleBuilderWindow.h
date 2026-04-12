@@ -22,6 +22,7 @@ public:
 private slots:
     void onAddActivityClicked();
     void onStartSimulationClicked();
+    void onDeleteActivityClicked();
 
 private:
     Ui::ScheduleBuilderWindow *ui;

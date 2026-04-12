@@ -18,6 +18,25 @@ ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
     connect(ui->startSimulationButton, &QPushButton::clicked,
             this, &ScheduleBuilderWindow::onStartSimulationClicked);
 
+    connect(ui->deleteActivityButton, &QPushButton::clicked,
+        this, &ScheduleBuilderWindow::onDeleteActivityClicked);
+
+    updateRemainingHours();
+}
+
+void ScheduleBuilderWindow::onDeleteActivityClicked()
+{
+    int row = ui->activityListWidget->currentRow();
+
+    if (row < 0)
+        return;
+
+    currentSchedule.activities.erase(
+        currentSchedule.activities.begin() + row
+    );
+
+    delete ui->activityListWidget->takeItem(row);
+
     updateRemainingHours();
 }
 
@@ -98,16 +117,48 @@ void ScheduleBuilderWindow::onAddActivityClicked()
         return;
     }
 
+    for (const Activity& a : currentSchedule.activities)
+    {
+        if (!(end <= a.startHour || start >= a.endHour))
+        {
+            QMessageBox::warning(this,
+                "Schedule Conflict",
+                "This activity overlaps with another activity.");
+            return;
+        }
+    }
+
     ActivityType type = stringToActivityType(typeText);
     Activity activity(name.toStdString(), type, start, end);
 
     currentSchedule.addActivity(activity);
+    std::sort(currentSchedule.activities.begin(),
+          currentSchedule.activities.end(),
+          [](const Activity& a, const Activity& b)
+          {
+              return a.startHour < b.startHour;
+          });
 
     QString displayText =
         name + " | " + typeText +
         " | " + QString::number(start) + ":00 - " + QString::number(end) + ":00" + " hour(s)";
 
-    ui->activityListWidget->addItem(displayText);
+    ui->activityListWidget->clear();
+
+    for (const Activity& a : currentSchedule.activities)
+    {
+        QString item =
+            QString::fromStdString(a.name) +
+            " | " +
+            activityTypeToString(a.type) +
+            " | " +
+            QString::number(a.startHour) +
+            ":00 - " +
+            QString::number(a.endHour) +
+            ":00";
+
+        ui->activityListWidget->addItem(item);
+    }
 
     updateRemainingHours();
 
