@@ -901,6 +901,7 @@ ScheduleGame_autogen/timestamp: \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.h \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.h \
+	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.h \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp \
@@ -909,6 +910,7 @@ ScheduleGame_autogen/timestamp: \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.h \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.h \
+	/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QString \
 	/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
 	/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
 	/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h \

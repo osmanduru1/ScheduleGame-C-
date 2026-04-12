@@ -1140,6 +1140,8 @@ CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o: \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/SimulationEngine.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/../models/Schedule.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/../models/Stats.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/RandomEvent.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include/ui_simulation.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
@@ -1176,4 +1178,8 @@ CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h

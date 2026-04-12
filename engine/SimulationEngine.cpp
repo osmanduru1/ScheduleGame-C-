@@ -1,6 +1,50 @@
 #include "SimulationEngine.h"
+#include "RandomEvent.h"
+
+#include <vector>
 #include <cstdlib>
-#include <ctime>
+
+
+std::vector<RandomEvent> events =
+{
+    {"Coffee break! Energy +10", 0, 10, 0, 0, 0, 10},
+
+    {"Unexpected assignment. Stress +10", 0, 0, 0, 10, 0, 10},
+
+    {"Quick nap. Energy +8 Sleep +5", 0, 8, 0, 0, 5, 8},
+
+    {"Phone distraction. Attention -8", 0, 0, -8, 0, 0, 8},
+
+    {"Workout motivation! Health +5 Stress -3", 5, 0, 0, -3, 0, 6}
+};
+
+
+QString SimulationEngine::runRandomEvent(Stats& stats)
+{
+    int roll = rand() % 100;
+
+    int cumulative = 0;
+
+    for (const RandomEvent& event : events)
+    {
+        cumulative += event.probability;
+
+        if (roll < cumulative)
+        {
+            stats.health += event.health;
+            stats.energy += event.energy;
+            stats.attention += event.attention;
+            stats.stress += event.stress;
+            stats.sleep += event.sleep;
+
+            stats.clamp();
+
+            return event.description;
+        }
+    }
+
+    return "";
+}
 
 void SimulationEngine::runActivity(Stats& stats, const Activity& activity)
 {

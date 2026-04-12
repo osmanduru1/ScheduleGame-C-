@@ -1145,4 +1145,6 @@ CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o: \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../models/Stats.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/SimulationEngine.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/../models/Schedule.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/../models/Stats.h
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/../models/Stats.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/RandomEvent.h

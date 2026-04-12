@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <ctime>
+#include <QMessageBox>
 
 SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
     : QMainWindow(parent),
@@ -135,23 +136,12 @@ void SimulationWindow::onNextActivityClicked()
 
     engine.runActivity(stats, activity);
 
-    QString eventMessage = "";
+    QString eventMessage = engine.runRandomEvent(stats);
 
-    int event = rand() % 10;
-
-    if (event == 0)
+    if (!eventMessage.isEmpty())
     {
-        stats.energy += 10;
-        eventMessage = "Random Event: You grabbed a coffee. Energy +10.";
+        QMessageBox::information(this, "Random Event", eventMessage);
     }
-    else if (event == 1)
-    {
-        stats.stress += 10;
-        stats.attention -= 5;
-        eventMessage = "Random Event: Unexpected problem! Stress +10, Attention -5.";
-    }
-
-    stats.clamp();
 
     updateStatsDisplay();
 
@@ -170,17 +160,10 @@ void SimulationWindow::onNextActivityClicked()
     if (currentIndex >= static_cast<int>(schedule.activities.size())) {
 
         ui->currentActivityLabel->setText("Schedule complete.");
-
-        if (!eventMessage.isEmpty())
-            ui->resultLabel->setText(eventMessage);
-
         finishSimulation("You survived the full schedule. You win!");
 
         return;
     }
 
     updateActivityDisplay();
-
-    if (!eventMessage.isEmpty())
-        ui->resultLabel->setText(eventMessage);
 }
