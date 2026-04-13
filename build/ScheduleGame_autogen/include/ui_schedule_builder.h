@@ -13,12 +13,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -36,13 +36,13 @@ public:
     QLabel *typeLabel;
     QComboBox *activityTypeComboBox;
     QLabel *startLabel;
-    QSpinBox *startHourSpinBox;
+    QComboBox *startTimeBox;
     QLabel *endLabel;
-    QSpinBox *endHourSpinBox;
+    QComboBox *endTimeBox;
     QPushButton *addActivityButton;
     QLabel *remainingHoursLabel;
     QLabel *listLabel;
-    QListWidget *activityListWidget;
+    QTableWidget *scheduleTable;
     QPushButton *deleteActivityButton;
     QPushButton *startSimulationButton;
 
@@ -88,24 +88,20 @@ public:
 
         formLayout->setWidget(2, QFormLayout::ItemRole::LabelRole, startLabel);
 
-        startHourSpinBox = new QSpinBox(centralwidget);
-        startHourSpinBox->setObjectName("startHourSpinBox");
-        startHourSpinBox->setMinimum(0);
-        startHourSpinBox->setMaximum(23);
+        startTimeBox = new QComboBox(centralwidget);
+        startTimeBox->setObjectName("startTimeBox");
 
-        formLayout->setWidget(2, QFormLayout::ItemRole::FieldRole, startHourSpinBox);
+        formLayout->setWidget(2, QFormLayout::ItemRole::FieldRole, startTimeBox);
 
         endLabel = new QLabel(centralwidget);
         endLabel->setObjectName("endLabel");
 
         formLayout->setWidget(3, QFormLayout::ItemRole::LabelRole, endLabel);
 
-        endHourSpinBox = new QSpinBox(centralwidget);
-        endHourSpinBox->setObjectName("endHourSpinBox");
-        endHourSpinBox->setMinimum(1);
-        endHourSpinBox->setMaximum(24);
+        endTimeBox = new QComboBox(centralwidget);
+        endTimeBox->setObjectName("endTimeBox");
 
-        formLayout->setWidget(3, QFormLayout::ItemRole::FieldRole, endHourSpinBox);
+        formLayout->setWidget(3, QFormLayout::ItemRole::FieldRole, endTimeBox);
 
 
         verticalLayout->addLayout(formLayout);
@@ -126,10 +122,12 @@ public:
 
         verticalLayout->addWidget(listLabel);
 
-        activityListWidget = new QListWidget(centralwidget);
-        activityListWidget->setObjectName("activityListWidget");
+        scheduleTable = new QTableWidget(centralwidget);
+        scheduleTable->setObjectName("scheduleTable");
+        scheduleTable->setRowCount(96);
+        scheduleTable->setColumnCount(1);
 
-        verticalLayout->addWidget(activityListWidget);
+        verticalLayout->addWidget(scheduleTable);
 
         deleteActivityButton = new QPushButton(centralwidget);
         deleteActivityButton->setObjectName("deleteActivityButton");
@@ -154,8 +152,8 @@ public:
         titleLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Build Your Schedule", nullptr));
         nameLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Activity Name:", nullptr));
         typeLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Activity Type:", nullptr));
-        startLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Start Hour:", nullptr));
-        endLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "End Hour:", nullptr));
+        startLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Start Time:", nullptr));
+        endLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "End Time:", nullptr));
         addActivityButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Add Activity", nullptr));
         remainingHoursLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Remaining Hours: 24", nullptr));
         listLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Your Schedule:", nullptr));

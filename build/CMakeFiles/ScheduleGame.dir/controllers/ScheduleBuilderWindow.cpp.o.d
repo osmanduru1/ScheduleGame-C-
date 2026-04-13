@@ -1180,6 +1180,11 @@ CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QHeaderView \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qheaderview.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemview.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qitemselectionmodel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
@@ -1192,17 +1197,12 @@ CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QListWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlistwidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlistview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qitemselectionmodel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QSpinBox \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qspinbox.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtableview.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \

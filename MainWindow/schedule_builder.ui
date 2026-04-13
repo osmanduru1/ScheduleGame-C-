@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ScheduleBuilderWindow</class>
-
  <widget class="QMainWindow" name="ScheduleBuilderWindow">
-
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,13 +10,11 @@
     <height>520</height>
    </rect>
   </property>
-
   <property name="windowTitle">
    <string>Schedule Builder</string>
   </property>
 
   <widget class="QWidget" name="centralwidget">
-
    <layout class="QVBoxLayout" name="verticalLayout">
 
     <item>
@@ -42,11 +38,9 @@
         </property>
        </widget>
       </item>
-
       <item row="0" column="1">
        <widget class="QLineEdit" name="activityNameEdit"/>
       </item>
-
 
       <item row="1" column="0">
        <widget class="QLabel" name="typeLabel">
@@ -55,54 +49,34 @@
         </property>
        </widget>
       </item>
-
       <item row="1" column="1">
        <widget class="QComboBox" name="activityTypeComboBox"/>
       </item>
 
-
       <item row="2" column="0">
        <widget class="QLabel" name="startLabel">
         <property name="text">
-         <string>Start Hour:</string>
+         <string>Start Time:</string>
         </property>
        </widget>
       </item>
-
       <item row="2" column="1">
-       <widget class="QSpinBox" name="startHourSpinBox">
-        <property name="minimum">
-         <number>0</number>
-        </property>
-        <property name="maximum">
-         <number>23</number>
-        </property>
-       </widget>
+       <widget class="QComboBox" name="startTimeBox"/>
       </item>
-
 
       <item row="3" column="0">
        <widget class="QLabel" name="endLabel">
         <property name="text">
-         <string>End Hour:</string>
+         <string>End Time:</string>
         </property>
        </widget>
       </item>
-
       <item row="3" column="1">
-       <widget class="QSpinBox" name="endHourSpinBox">
-        <property name="minimum">
-         <number>1</number>
-        </property>
-        <property name="maximum">
-         <number>24</number>
-        </property>
-       </widget>
+       <widget class="QComboBox" name="endTimeBox"/>
       </item>
 
      </layout>
     </item>
-
 
     <item>
      <widget class="QPushButton" name="addActivityButton">
@@ -111,7 +85,6 @@
       </property>
      </widget>
     </item>
-
 
     <item>
      <widget class="QLabel" name="remainingHoursLabel">
@@ -124,7 +97,6 @@
      </widget>
     </item>
 
-
     <item>
      <widget class="QLabel" name="listLabel">
       <property name="text">
@@ -133,19 +105,24 @@
      </widget>
     </item>
 
-
     <item>
-     <widget class="QListWidget" name="activityListWidget"/>
+     <widget class="QTableWidget" name="scheduleTable">
+      <property name="rowCount">
+       <number>96</number>
+      </property>
+      <property name="columnCount">
+       <number>1</number>
+      </property>
+     </widget>
     </item>
 
     <item>
-        <widget class="QPushButton" name="deleteActivityButton">
-            <property name="text">
-                <string>Delete Selected Activity</string>
-            </property>
-        </widget>
+     <widget class="QPushButton" name="deleteActivityButton">
+      <property name="text">
+       <string>Delete Selected Activity</string>
+      </property>
+     </widget>
     </item>
-
 
     <item>
      <widget class="QPushButton" name="startSimulationButton">
@@ -156,12 +133,9 @@
     </item>
 
    </layout>
-
   </widget>
-
  </widget>
 
  <resources/>
  <connections/>
-
 </ui>

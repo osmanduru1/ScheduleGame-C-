@@ -3,6 +3,7 @@
 #include "ui_schedule_builder.h"
 
 #include <QMessageBox>
+#include <algorithm>
 
 ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -19,23 +20,7 @@ ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
             this, &ScheduleBuilderWindow::onStartSimulationClicked);
 
     connect(ui->deleteActivityButton, &QPushButton::clicked,
-        this, &ScheduleBuilderWindow::onDeleteActivityClicked);
-
-    updateRemainingHours();
-}
-
-void ScheduleBuilderWindow::onDeleteActivityClicked()
-{
-    int row = ui->activityListWidget->currentRow();
-
-    if (row < 0)
-        return;
-
-    currentSchedule.activities.erase(
-        currentSchedule.activities.begin() + row
-    );
-
-    delete ui->activityListWidget->takeItem(row);
+            this, &ScheduleBuilderWindow::onDeleteActivityClicked);
 
     updateRemainingHours();
 }
@@ -48,6 +33,7 @@ ScheduleBuilderWindow::~ScheduleBuilderWindow()
 
 void ScheduleBuilderWindow::setupUiData()
 {
+    // Activity types
     ui->activityTypeComboBox->addItem("Class");
     ui->activityTypeComboBox->addItem("Study");
     ui->activityTypeComboBox->addItem("Work");
@@ -56,7 +42,50 @@ void ScheduleBuilderWindow::setupUiData()
     ui->activityTypeComboBox->addItem("Exercise");
     ui->activityTypeComboBox->addItem("Break");
 
+    // Time dropdowns
+    for (int h = 0; h < 24; h++)
+    {
+        QString time = QString("%1:00").arg(h,2,10,QChar('0'));
 
+        ui->startTimeBox->addItem(time);
+        ui->endTimeBox->addItem(time);
+    }
+
+    // Calendar table
+    ui->scheduleTable->setRowCount(96);
+    ui->scheduleTable->setColumnCount(1);
+
+    QStringList timeLabels;
+
+    for (int i = 0; i < 96; i++)
+    {
+        int hour = i / 4;
+        int minute = (i % 4) * 15;
+
+        QString label =
+            QString("%1:%2")
+            .arg(hour,2,10,QChar('0'))
+            .arg(minute,2,10,QChar('0'));
+
+        timeLabels << label;
+    }
+
+    ui->scheduleTable->setVerticalHeaderLabels(timeLabels);
+    ui->scheduleTable->setHorizontalHeaderLabels({"Schedule"});
+    ui->scheduleTable->horizontalHeader()->setStretchLastSection(true);
+}
+
+void ScheduleBuilderWindow::onDeleteActivityClicked()
+{
+    int row = ui->scheduleTable->currentRow();
+
+    if (row < 0)
+        return;
+
+    ui->scheduleTable->clearContents();
+    currentSchedule.activities.clear();
+
+    updateRemainingHours();
 }
 
 ActivityType ScheduleBuilderWindow::stringToActivityType(const QString& typeText) const
@@ -73,7 +102,8 @@ ActivityType ScheduleBuilderWindow::stringToActivityType(const QString& typeText
 
 QString ScheduleBuilderWindow::activityTypeToString(ActivityType type) const
 {
-    switch (type) {
+    switch(type)
+    {
         case ActivityType::Class: return "Class";
         case ActivityType::Study: return "Study";
         case ActivityType::Work: return "Work";
@@ -90,74 +120,54 @@ void ScheduleBuilderWindow::onAddActivityClicked()
 {
     QString name = ui->activityNameEdit->text().trimmed();
     QString typeText = ui->activityTypeComboBox->currentText();
-    int start = ui->startHourSpinBox->value();
-    int end = ui->endHourSpinBox->value();
 
-    if (end <= start) {
-        QMessageBox::warning(this, "Invalid Time",
-                            "End hour must be after start hour.");
+    int start = ui->startTimeBox->currentIndex();
+    int end   = ui->endTimeBox->currentIndex();
+
+    if (end <= start)
+    {
+        QMessageBox::warning(this,"Invalid Time",
+                             "End hour must be after start hour.");
         return;
-    }    
+    }
 
-    if (name.isEmpty()) {
-        QMessageBox::warning(this, "Missing Activity Name",
+    if (name.isEmpty())
+    {
+        QMessageBox::warning(this,"Missing Activity Name",
                              "Please enter an activity name.");
         return;
-    }
-
-    int total = 0;
-    for (const Activity& a : currentSchedule.activities)
-    total += (a.endHour - a.startHour);
-
-    int duration = end - start;
-
-    if (total + duration > 24) {
-        QMessageBox::warning(this, "Invalid Schedule",
-                            "Total schedule time cannot exceed 24 hours.");
-        return;
-    }
-
-    for (const Activity& a : currentSchedule.activities)
-    {
-        if (!(end <= a.startHour || start >= a.endHour))
-        {
-            QMessageBox::warning(this,
-                "Schedule Conflict",
-                "This activity overlaps with another activity.");
-            return;
-        }
     }
 
     ActivityType type = stringToActivityType(typeText);
     Activity activity(name.toStdString(), type, start, end);
 
     currentSchedule.addActivity(activity);
+
     std::sort(currentSchedule.activities.begin(),
-          currentSchedule.activities.end(),
-          [](const Activity& a, const Activity& b)
-          {
-              return a.startHour < b.startHour;
-          });
+              currentSchedule.activities.end(),
+              [](const Activity& a,const Activity& b)
+              {
+                  return a.startHour < b.startHour;
+              });
 
-    QString displayText =
-        name + " | " + typeText +
-        " | " + QString::number(start) + ":00 - " + QString::number(end) + ":00" + " hour(s)";
-
-    ui->activityListWidget->clear();
+    ui->scheduleTable->clearContents();
 
     for (const Activity& a : currentSchedule.activities)
     {
-        QString item =
-            QString::fromStdString(a.name) +
-            " | " +
-            activityTypeToString(a.type) +
-            " | " +
-            QString::number(a.startHour) +
-            ":00 - " +
-            QString::number(a.endHour) +
-            ":00";
+        int startRow = a.startHour * 4;
+        int endRow   = a.endHour * 4;
 
-        ui->activityListWidget->addItem(item);
+        for(int r=startRow;r<endRow;r++)
+        {
+            QString item =
+                QString::fromStdString(a.name) +
+                " | " +
+                activityTypeToString(a.type);
+
+            QTableWidgetItem* cell = new QTableWidgetItem(item);
+
+            ui->scheduleTable->setItem(r,0,cell);
+        }
     }
 
     updateRemainingHours();
@@ -168,18 +178,17 @@ void ScheduleBuilderWindow::onAddActivityClicked()
 
 void ScheduleBuilderWindow::onStartSimulationClicked()
 {
-    if (currentSchedule.activities.empty()) {
-        QMessageBox::warning(this, "Empty Schedule",
-                             "Please add at least one activity before starting the simulation.");
+    if (currentSchedule.activities.empty())
+    {
+        QMessageBox::warning(this,"Empty Schedule",
+                             "Please add at least one activity.");
         return;
     }
 
-    if (simulationWindow != nullptr) {
+    if (simulationWindow)
         delete simulationWindow;
-        simulationWindow = nullptr;
-    }
 
-    simulationWindow = new SimulationWindow(currentSchedule, this);
+    simulationWindow = new SimulationWindow(currentSchedule,this);
     simulationWindow->show();
 }
 
@@ -188,7 +197,7 @@ void ScheduleBuilderWindow::updateRemainingHours()
     int total = 0;
 
     for (const Activity& a : currentSchedule.activities)
-    total += (a.endHour - a.startHour);
+        total += (a.endHour - a.startHour);
 
     int remaining = 24 - total;
 
