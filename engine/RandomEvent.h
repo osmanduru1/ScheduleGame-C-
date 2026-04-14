@@ -1,7 +1,14 @@
-#ifndef RANDOM_EVENT_H
-#define RANDOM_EVENT_H
+#pragma once
 
-#include <QtCore/QString>
+#include <QString>
+
+enum class Rarity
+{
+    Common,
+    Rare,
+    Legendary
+};
+
 struct RandomEvent
 {
     QString description;
@@ -12,7 +19,6 @@ struct RandomEvent
     int stress = 0;
     int sleep = 0;
 
-    int probability;   // percentage chance
+    int weight;
+    Rarity rarity;
 };
-
-#endif

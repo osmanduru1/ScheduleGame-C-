@@ -7,41 +7,110 @@
 #include <map>
 #include <vector>
 #include "RandomEvent.h"
+#include <QMessageBox>
 
 std::map<ActivityType, std::vector<RandomEvent>> events =
 {
     {ActivityType::Class,
     {
-        {"Surprise quiz!", 0,0,-6,12,0,8},
-        {"Interesting lecture!", 0,0,10,0,0,6},
-        {"You doze off.", 0,0,-10,0,0,5}
+        {"Interesting lecture.", 0, 0, 8, 0, 0, 12, Rarity::Common},
+        {"You struggle to stay focused.", 0, 0, -6, 0, 0, 10, Rarity::Common},
+        {"You forgot about a quiz.", 0, 0, -4, 10, 0, 8, Rarity::Common},
+
+        {"Professor answers your question clearly.", 0, 0, 10, -4, 0, 6, Rarity::Rare},
+        {"Class participation goes well.", 0, 0, 6, -3, 0, 5, Rarity::Rare},
+        {"You get called on unexpectedly.", 0, 0, 0, 12, 0, 5, Rarity::Rare},
+
+        {"Professor mentions a research opportunity.", 0, 0, 15, -8, 0, 2, Rarity::Legendary}
     }},
 
     {ActivityType::Study,
     {
-        {"Productive session!", 0,0,8,0,0,7},
-        {"Phone distraction.", 0,0,-8,0,0,6},
-        {"You understand everything!", 0,0,0,-5,0,5}
+        {"Productive study session.", 0, 0, 8, 0, 0, 12, Rarity::Common},
+        {"You get distracted by your phone.", 0, 0, -8, 0, 0, 10, Rarity::Common},
+        {"You hit mental fatigue.", 0, -5, -4, 0, 0, 9, Rarity::Common},
+
+        {"You finally understand the material.", 0, 0, 6, -6, 0, 6, Rarity::Rare},
+        {"You find a great study method.", 0, 0, 10, 0, 0, 5, Rarity::Rare},
+        {"You realize an exam is sooner than expected.", 0, 0, 0, 12, 0, 5, Rarity::Rare},
+
+        {"You enter a flow state.", 0, 0, 16, -8, 0, 2, Rarity::Legendary}
     }},
 
     {ActivityType::Work,
     {
-        {"Difficult customer!", 0,0,0,10,0,7},
-        {"Easy shift.", 0,0,0,-5,0,6}
+        {"Routine shift.", 0, -4, 0, 0, 0, 12, Rarity::Common},
+        {"Difficult customer.", 0, 0, 0, 10, 0, 10, Rarity::Common},
+        {"Long stretch on your feet.", -4, -4, 0, 0, 0, 9, Rarity::Common},
+
+        {"A coworker helps you out.", 0, 0, 0, -5, 0, 6, Rarity::Rare},
+        {"A slow and easy shift.", 0, 3, 0, -4, 0, 5, Rarity::Rare},
+        {"Manager puts extra pressure on you.", 0, 0, 0, 14, 0, 5, Rarity::Rare},
+
+        {"You get praised for your work.", 0, 0, 8, -8, 0, 2, Rarity::Legendary}
+    }},
+
+    {ActivityType::Meal,
+    {
+        {"You eat a proper meal.", 6, 4, 0, 0, 0, 12, Rarity::Common},
+        {"You eat too quickly.", 0, 2, 0, 2, 0, 9, Rarity::Common},
+        {"The meal is underwhelming.", 2, 0, 0, 0, 0, 8, Rarity::Common},
+
+        {"A really satisfying meal.", 8, 0, 0, -4, 0, 5, Rarity::Rare},
+        {"You run into a friend and relax.", 0, 0, 0, -6, 0, 5, Rarity::Rare},
+
+        {"A perfect meal and mental reset.", 10, 6, 0, -6, 0, 2, Rarity::Legendary}
     }},
 
     {ActivityType::Sleep,
     {
-        {"Deep sleep!", 0,10,0,0,5,6},
-        {"Nightmare!", 0,0,0,8,0,4}
+        {"You get solid sleep.", 0, 8, 0, 0, 5, 12, Rarity::Common},
+        {"Restless sleep.", 0, 3, 0, 0, 2, 10, Rarity::Common},
+        {"You have a nightmare.", 0, 0, 0, 8, 0, 7, Rarity::Common},
+
+        {"You wake up refreshed.", 0, 12, 0, -4, 0, 6, Rarity::Rare},
+        {"You oversleep slightly.", 0, 8, -3, 0, 0, 5, Rarity::Rare},
+
+        {"The best sleep you've had in weeks.", 0, 15, 0, -8, 8, 2, Rarity::Legendary}
+    }},
+
+    {ActivityType::Exercise,
+    {
+        {"You get a decent workout.", 6, -4, 0, 0, 0, 12, Rarity::Common},
+        {"You feel sluggish today.", 0, -6, 0, 0, 0, 10, Rarity::Common},
+        {"Workout clears your mind.", 0, 0, 0, -5, 0, 8, Rarity::Common},
+
+        {"A great workout session.", 8, 0, 0, -6, 0, 6, Rarity::Rare},
+        {"You feel some soreness.", -3, -4, 0, 0, 0, 5, Rarity::Rare},
+
+        {"Runner's high.", 10, 4, 0, -8, 0, 2, Rarity::Legendary}
     }},
 
     {ActivityType::Break,
     {
-        {"Coffee break! Energy +10", 0,10,0,0,0,7},
-        {"Relaxing moment. Stress -5", 0,0,0,-5,0,6}
+        {"You take a coffee break.", 0, 10, 0, 0, 0, 12, Rarity::Common},
+        {"You scroll your phone too long.", 0, 0, -5, 0, 0, 9, Rarity::Common},
+        {"You get a short mental reset.", 0, 0, 0, -4, 0, 10, Rarity::Common},
+
+        {"A very calming break.", 0, 0, 4, -7, 0, 6, Rarity::Rare},
+        {"You take a quick nap.", 0, 8, 0, 0, 4, 5, Rarity::Rare},
+
+        {"A perfect reset.", 0, 10, 8, -8, 0, 2, Rarity::Legendary}
     }}
 };
+
+int getRarityChance(Rarity r)
+{
+    switch (r)
+    {
+        case Rarity::Common: return 50;     // 50% chance
+        case Rarity::Rare: return 20;       // 20%
+        case Rarity::Legendary: return 5;   // 5%
+    }
+    return 0;
+}
+
+
 QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
 {
     auto it = events.find(activity.type);
@@ -54,23 +123,35 @@ QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
     if (eventList.empty())
         return "";
 
-    // 50% chance an event happens at all
-    int trigger = rand() % 100;
-    if (trigger > 50)
+    // --- Step 1: Maybe no event at all
+    if (rand() % 100 < 40)
         return "";
 
-    // weighted random selection
-    int totalWeight = 0;
-    for (const auto& e : eventList)
-        totalWeight += e.probability;
-
-    int roll = rand() % totalWeight;
-
-    int cumulative = 0;
+    // --- Step 2: Filter by rarity chance
+    std::vector<RandomEvent> validEvents;
 
     for (const auto& e : eventList)
     {
-        cumulative += e.probability;
+        int chance = getRarityChance(e.rarity);
+
+        if (rand() % 100 < chance)
+            validEvents.push_back(e);
+    }
+
+    if (validEvents.empty())
+        return "";
+
+    // --- Step 3: Weighted selection
+    int totalWeight = 0;
+    for (const auto& e : validEvents)
+        totalWeight += e.weight;
+
+    int roll = rand() % totalWeight;
+    int cumulative = 0;
+
+    for (const auto& e : validEvents)
+    {
+        cumulative += e.weight;
 
         if (roll < cumulative)
         {
