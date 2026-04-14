@@ -1140,8 +1140,9 @@ CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o: \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/SimulationEngine.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/../models/Schedule.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/../models/Stats.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/RandomEvent.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/DecisionEvent.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include/ui_simulation.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \

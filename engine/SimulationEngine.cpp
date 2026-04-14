@@ -9,6 +9,170 @@
 #include "RandomEvent.h"
 #include <QMessageBox>
 
+std::map<ActivityType, std::vector<DecisionEvent>> decisionEvents =
+{
+    {ActivityType::Class,
+    {
+        {
+            "You're feeling tired in class.",
+            {"Zone out", 0, 2, -8, -2, 0},
+            {"Force yourself to focus", 0, -3, 8, 4, 0},
+            10, Rarity::Common
+        },
+
+        {
+            "The professor asks a question.",
+            {"Stay quiet", 0, 0, -2, -2, 0},
+            {"Answer confidently", 0, -2, 6, 6, 0},
+            8, Rarity::Rare
+        },
+
+        {
+            "You forgot to review the material.",
+            {"Hope for the best", 0, 0, -6, 2, 0},
+            {"Quickly cram", 0, -4, 5, 6, 0},
+            7, Rarity::Common
+        }
+    }},
+
+    {ActivityType::Study,
+    {
+        {
+            "You feel distracted.",
+            {"Scroll your phone", 0, 0, -8, -3, 0},
+            {"Push through", 0, -4, 8, 5, 0},
+            10, Rarity::Common
+        },
+
+        {
+            "You're mentally exhausted.",
+            {"Take a break", 0, 6, 0, -5, 2},
+            {"Keep studying", 0, -6, 6, 7, 0},
+            8, Rarity::Rare
+        },
+
+        {
+            "You find a hard problem.",
+            {"Skip it", 0, 0, -3, -2, 0},
+            {"Solve it carefully", 0, -3, 10, 6, 0},
+            7, Rarity::Common
+        },
+
+        {
+            "You're in the zone.",
+            {"Keep going", 0, -5, 12, 5, 0},
+            {"Stop before burnout", 0, 4, 6, -4, 0},
+            5, Rarity::Rare
+        }
+    }},
+
+    {ActivityType::Work,
+    {
+        {
+            "You're getting tired at work.",
+            {"Take it easy", 0, 3, 0, -3, 0},
+            {"Push harder", 0, -6, 0, 6, 0},
+            10, Rarity::Common
+        },
+
+        {
+            "A coworker asks for help.",
+            {"Help them", 0, -3, 2, -4, 0},
+            {"Focus on your own work", 0, 0, 0, 3, 0},
+            8, Rarity::Common
+        },
+
+        {
+            "Your manager is watching.",
+            {"Work extra hard", 0, -5, 4, 6, 0},
+            {"Stay relaxed", 0, 2, 0, -3, 0},
+            7, Rarity::Rare
+        }
+    }},
+
+    {ActivityType::Meal,
+    {
+        {
+            "You're in a rush while eating.",
+            {"Eat quickly", 2, 3, 0, 2, 0},
+            {"Take your time", 6, 0, 2, -4, 0},
+            10, Rarity::Common
+        },
+
+        {
+            "You feel like overeating.",
+            {"Indulge", 5, 4, 0, -2, 0},
+            {"Control yourself", 2, 2, 0, 3, 0},
+            8, Rarity::Common
+        }
+    }},
+
+    {ActivityType::Sleep,
+    {
+        {
+            "You can't fall asleep.",
+            {"Stay on your phone", 0, 2, -3, 3, -2},
+            {"Try to relax", 0, 5, 0, -4, 4},
+            10, Rarity::Common
+        },
+
+        {
+            "You wake up early.",
+            {"Go back to sleep", 0, 4, -3, 0, 4},
+            {"Get up and start the day", 0, -2, 5, 2, 0},
+            8, Rarity::Rare
+        }
+    }},
+
+    {ActivityType::Exercise,
+    {
+        {
+            "You feel tired before exercising.",
+            {"Skip workout", 0, 4, 0, -3, 0},
+            {"Push through", 6, -5, 0, -4, 0},
+            10, Rarity::Common
+        },
+
+        {
+            "You have extra energy.",
+            {"Go harder", 8, -6, 0, -5, 0},
+            {"Keep it light", 4, -2, 0, -2, 0},
+            8, Rarity::Rare
+        },
+
+        {
+            "You feel a slight pain.",
+            {"Stop early", -1, 2, 0, -3, 0},
+            {"Ignore it", 5, -5, 0, 2, 0},
+            7, Rarity::Common
+        }
+    }},
+
+    {ActivityType::Break,
+    {
+        {
+            "You have some free time.",
+            {"Scroll social media", 0, 2, -5, -2, 0},
+            {"Relax properly", 0, 5, 2, -5, 0},
+            10, Rarity::Common
+        },
+
+        {
+            "You're thinking about work.",
+            {"Keep worrying", 0, 0, 0, 6, 0},
+            {"Clear your mind", 0, 3, 2, -6, 0},
+            8, Rarity::Common
+        },
+
+        {
+            "You feel bored.",
+            {"Do something productive", 0, -2, 6, 2, 0},
+            {"Just chill", 0, 4, 0, -3, 0},
+            7, Rarity::Rare
+        }
+    }}
+};
+
 std::map<ActivityType, std::vector<RandomEvent>> events =
 {
     {ActivityType::Class,
@@ -99,18 +263,70 @@ std::map<ActivityType, std::vector<RandomEvent>> events =
     }}
 };
 
-int getRarityChance(Rarity r)
+int rarityChance(Rarity r)
 {
     switch (r)
     {
-        case Rarity::Common: return 50;     // 50% chance
-        case Rarity::Rare: return 20;       // 20%
-        case Rarity::Legendary: return 5;   // 5%
+        case Rarity::Common: return 60;
+        case Rarity::Rare: return 25;
+        case Rarity::Legendary: return 5;
     }
     return 0;
 }
 
+// =======================
+// DECISION EVENT LOGIC
+// =======================
+DecisionEvent* SimulationEngine::getDecisionEvent(const Activity& activity)
+{
+    auto it = decisionEvents.find(activity.type);
 
+    if (it == decisionEvents.end())
+        return nullptr;
+
+    auto& list = it->second;
+
+    if (list.empty())
+        return nullptr;
+
+    // 15% chance decision event
+    if (rand() % 100 > 15)
+        return nullptr;
+
+    int totalWeight = 0;
+    for (const auto& e : list)
+        totalWeight += e.weight;
+
+    int roll = rand() % totalWeight;
+    int cumulative = 0;
+
+    for (auto& e : list)
+    {
+        cumulative += e.weight;
+        if (roll < cumulative)
+            return &e;
+    }
+
+    return nullptr;
+}
+
+// =======================
+// APPLY DECISION
+// =======================
+void SimulationEngine::applyDecision(Stats& stats, const DecisionOption& option)
+{
+    stats.health += option.health;
+    stats.energy += option.energy;
+    stats.attention += option.attention;
+    stats.stress += option.stress;
+    stats.sleep += option.sleep;
+
+    stats.clamp();
+}
+
+// =======================
+// RANDOM EVENT LOGIC
+// =======================
 QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
 {
     auto it = events.find(activity.type);
@@ -118,38 +334,35 @@ QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
     if (it == events.end())
         return "";
 
-    const std::vector<RandomEvent>& eventList = it->second;
+    const std::vector<RandomEvent>& list = it->second;
 
-    if (eventList.empty())
+    if (list.empty())
         return "";
 
-    // --- Step 1: Maybe no event at all
+    // 40% nothing happens
     if (rand() % 100 < 40)
         return "";
 
-    // --- Step 2: Filter by rarity chance
-    std::vector<RandomEvent> validEvents;
+    // filter by rarity
+    std::vector<RandomEvent> valid;
 
-    for (const auto& e : eventList)
+    for (const auto& e : list)
     {
-        int chance = getRarityChance(e.rarity);
-
-        if (rand() % 100 < chance)
-            validEvents.push_back(e);
+        if (rand() % 100 < rarityChance(e.rarity))
+            valid.push_back(e);
     }
 
-    if (validEvents.empty())
+    if (valid.empty())
         return "";
 
-    // --- Step 3: Weighted selection
     int totalWeight = 0;
-    for (const auto& e : validEvents)
+    for (const auto& e : valid)
         totalWeight += e.weight;
 
     int roll = rand() % totalWeight;
     int cumulative = 0;
 
-    for (const auto& e : validEvents)
+    for (const auto& e : valid)
     {
         cumulative += e.weight;
 
@@ -169,6 +382,10 @@ QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
 
     return "";
 }
+
+// =======================
+// ACTIVITY BASE EFFECT
+// =======================
 void SimulationEngine::runActivity(Stats& stats, const Activity& activity)
 {
     int h = activity.endHour - activity.startHour;

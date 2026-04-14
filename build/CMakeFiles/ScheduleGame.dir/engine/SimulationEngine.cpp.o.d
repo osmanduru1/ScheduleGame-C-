@@ -906,6 +906,7 @@ CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__split_buffer \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/../models/Activity.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/../models/Stats.h \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qchar.h \
@@ -1017,7 +1018,7 @@ CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringbuilder.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter_base.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionEvent.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \

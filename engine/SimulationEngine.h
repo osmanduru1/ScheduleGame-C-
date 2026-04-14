@@ -2,14 +2,18 @@
 
 #include "../models/Schedule.h"
 #include "../models/Stats.h"
-#include <vector>
-#include <QString>
 #include "RandomEvent.h"
+#include "DecisionEvent.h"
 
-class SimulationEngine {
+#include <QString>
+
+class SimulationEngine
+{
 public:
-
     void runActivity(Stats& stats, const Activity& activity);
 
     QString runRandomEvent(Stats& stats, const Activity& activity);
+
+    DecisionEvent* getDecisionEvent(const Activity& activity);
+    void applyDecision(Stats& stats, const DecisionOption& option);
 };

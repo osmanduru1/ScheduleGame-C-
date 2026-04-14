@@ -136,11 +136,39 @@ void SimulationWindow::onNextActivityClicked()
 
     engine.runActivity(stats, activity);
 
-    QString eventMessage = engine.runRandomEvent(stats, activity);
+// 1️⃣ Try decision event first
+    DecisionEvent* decision = engine.getDecisionEvent(activity);
 
-    if (!eventMessage.isEmpty())
+    if (decision != nullptr)
     {
-        QMessageBox::information(this, "Random Event", eventMessage);
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Decision");
+        msgBox.setText(decision->description);
+
+        QPushButton* leftBtn = msgBox.addButton(
+            decision->leftOption.text,
+            QMessageBox::AcceptRole);
+
+        QPushButton* rightBtn = msgBox.addButton(
+            decision->rightOption.text,
+            QMessageBox::RejectRole);
+
+        msgBox.exec();
+
+        if (msgBox.clickedButton() == leftBtn)
+            engine.applyDecision(stats, decision->leftOption);
+        else
+            engine.applyDecision(stats, decision->rightOption);
+    }
+    else
+    {
+        // 2️⃣ Otherwise try random event
+        QString eventMessage = engine.runRandomEvent(stats, activity);
+
+        if (!eventMessage.isEmpty())
+        {
+            QMessageBox::information(this, "Event", eventMessage);
+        }
     }
 
     updateStatsDisplay();

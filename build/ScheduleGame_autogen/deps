@@ -901,6 +901,7 @@ ScheduleGame_autogen/timestamp: \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.h \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.h \
+	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionEvent.h \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp \
 	/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.h \
