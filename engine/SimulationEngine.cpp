@@ -4,95 +4,90 @@
 #include <vector>
 #include <cstdlib>
 
-std::vector<RandomEvent> classEvents =
-{
-    {"Surprise quiz! Stress +12 Attention -6", 0, 0, -6, 12, 0, 8},
-    {"Interesting lecture! Attention +10", 0, 0, 10, 0, 0, 6},
-    {"You doze off in class. Attention -10", 0, 0, -10, 0, 0, 6}
-};
+#include <map>
+#include <vector>
+#include "RandomEvent.h"
 
-std::vector<RandomEvent> studyEvents =
+std::map<ActivityType, std::vector<RandomEvent>> events =
 {
-    {"Productive study session! Attention +8", 0, 0, 8, 0, 0, 7},
-    {"You procrastinate on your phone. Attention -8", 0, 0, -8, 0, 0, 7},
-    {"You understand the material! Stress -5", 0, 0, 0, -5, 0, 6}
-};
+    {ActivityType::Class,
+    {
+        {"Surprise quiz!", 0,0,-6,12,0,8},
+        {"Interesting lecture!", 0,0,10,0,0,6},
+        {"You doze off.", 0,0,-10,0,0,5}
+    }},
 
-std::vector<RandomEvent> workEvents =
-{
-    {"Difficult customer! Stress +10", 0, 0, 0, 10, 0, 7},
-    {"Easy shift today. Stress -5", 0, 0, 0, -5, 0, 6}
-};
+    {ActivityType::Study,
+    {
+        {"Productive session!", 0,0,8,0,0,7},
+        {"Phone distraction.", 0,0,-8,0,0,6},
+        {"You understand everything!", 0,0,0,-5,0,5}
+    }},
 
-std::vector<RandomEvent> sleepEvents =
-{
-    {"Deep sleep! Energy +10", 0, 10, 0, 0, 5, 7},
-    {"Nightmare! Stress +8", 0, 0, 0, 8, 0, 6}
-};
+    {ActivityType::Work,
+    {
+        {"Difficult customer!", 0,0,0,10,0,7},
+        {"Easy shift.", 0,0,0,-5,0,6}
+    }},
 
-std::vector<RandomEvent> breakEvents =
-{
-    {"Coffee break! Energy +10", 0, 10, 0, 0, 0, 7},
-    {"Relaxing moment. Stress -5", 0, 0, 0, -5, 0, 6}
-};
+    {ActivityType::Sleep,
+    {
+        {"Deep sleep!", 0,10,0,0,5,6},
+        {"Nightmare!", 0,0,0,8,0,4}
+    }},
 
+    {ActivityType::Break,
+    {
+        {"Coffee break! Energy +10", 0,10,0,0,0,7},
+        {"Relaxing moment. Stress -5", 0,0,0,-5,0,6}
+    }}
+};
 QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
 {
-    std::vector<RandomEvent>* eventList = nullptr;
+    auto it = events.find(activity.type);
 
-    switch (activity.type)
-    {
-        case ActivityType::Class:
-            eventList = &classEvents;
-            break;
-
-        case ActivityType::Study:
-            eventList = &studyEvents;
-            break;
-
-        case ActivityType::Work:
-            eventList = &workEvents;
-            break;
-
-        case ActivityType::Sleep:
-            eventList = &sleepEvents;
-            break;
-
-        case ActivityType::Break:
-            eventList = &breakEvents;
-            break;
-
-        default:
-            return "";
-    }
-
-    if (eventList->empty())
+    if (it == events.end())
         return "";
 
-    int roll = rand() % 100;
+    const std::vector<RandomEvent>& eventList = it->second;
+
+    if (eventList.empty())
+        return "";
+
+    // 50% chance an event happens at all
+    int trigger = rand() % 100;
+    if (trigger > 50)
+        return "";
+
+    // weighted random selection
+    int totalWeight = 0;
+    for (const auto& e : eventList)
+        totalWeight += e.probability;
+
+    int roll = rand() % totalWeight;
+
     int cumulative = 0;
 
-    for (const RandomEvent& event : *eventList)
+    for (const auto& e : eventList)
     {
-        cumulative += event.probability;
+        cumulative += e.probability;
 
         if (roll < cumulative)
         {
-            stats.health += event.health;
-            stats.energy += event.energy;
-            stats.attention += event.attention;
-            stats.stress += event.stress;
-            stats.sleep += event.sleep;
+            stats.health += e.health;
+            stats.energy += e.energy;
+            stats.attention += e.attention;
+            stats.stress += e.stress;
+            stats.sleep += e.sleep;
 
             stats.clamp();
 
-            return event.description;
+            return e.description;
         }
     }
 
     return "";
 }
-
 void SimulationEngine::runActivity(Stats& stats, const Activity& activity)
 {
     int h = activity.endHour - activity.startHour;
