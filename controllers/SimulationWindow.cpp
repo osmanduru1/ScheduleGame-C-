@@ -1,3 +1,24 @@
+/*
+ * SimulationWindow.cpp
+ *
+ * This file handles the simulation phase of the application.
+ *
+ * Purpose:
+ *  - Simulate the user's schedule activity-by-activity
+ *  - Update player stats (health, energy, stress, etc.)
+ *  - Introduce decision events and random events
+ *  - Provide a final evaluation of the schedule
+ *
+ * Simulation Flow:
+ *  - Activities are processed sequentially
+ *  - Each activity modifies stats via SimulationEngine
+ *  - Decision events allow user interaction
+ *  - Random events introduce variability
+ *  - Simulation ends when:
+ *      • All activities are completed, or
+ *      • Stats drop below survival threshold
+ */
+
 #include "SimulationWindow.h"
 #include "ui_simulation.h"
 #include "../engine/DecisionCard.h"
@@ -6,6 +27,15 @@
 #include <ctime>
 #include <QMessageBox>
 
+/*
+ * Constructor
+ *
+ * Initializes:
+ *  - UI elements
+ *  - Stat progress bars
+ *  - Random seed for events
+ *  - First activity display
+ */
 SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::SimulationWindow),
@@ -14,12 +44,14 @@ SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
 {
     ui->setupUi(this);
 
+    // Initialize stat bars (0–100 scale)
     ui->healthBar->setRange(0, 100);
     ui->energyBar->setRange(0, 100);
     ui->attentionBar->setRange(0, 100);
     ui->stressBar->setRange(0, 100);
     ui->sleepBar->setRange(0, 100);
 
+    // Seed randomness for simulation variability
     srand(time(nullptr));
 
     ui->resultLabel->setText("");
@@ -27,6 +59,7 @@ SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
     updateStatsDisplay();
     updateActivityDisplay();
 
+    // Button connections
     connect(ui->nextActivityButton, &QPushButton::clicked,
             this, &SimulationWindow::onNextActivityClicked);
 
@@ -34,11 +67,17 @@ SimulationWindow::SimulationWindow(const Schedule& schedule, QWidget *parent)
         this, &SimulationWindow::onRestartClicked);
 }
 
+/*
+ * Destructor
+ */
 SimulationWindow::~SimulationWindow()
 {
     delete ui;
 }
 
+/*
+ * Updates UI progress bars to reflect current stats.
+ */
 void SimulationWindow::updateStatsDisplay()
 {
     ui->healthBar->setValue(stats.health);
@@ -48,6 +87,9 @@ void SimulationWindow::updateStatsDisplay()
     ui->sleepBar->setValue(stats.sleep);
 }
 
+/*
+ * Displays the current activity being simulated.
+ */
 void SimulationWindow::updateActivityDisplay()
 {
     if (currentIndex < static_cast<int>(schedule.activities.size())) {
@@ -68,15 +110,27 @@ void SimulationWindow::updateActivityDisplay()
     }
 }
 
+/*
+ * Closes the simulation window (restart action).
+ */
 void SimulationWindow::onRestartClicked()
 {
     this->close();
 }
 
+/*
+ * Finalizes the simulation and generates a report.
+ *
+ * Includes:
+ *  - Final stats
+ *  - Overall rating
+ *  - Suggestions based on weaknesses
+ */
 void SimulationWindow::finishSimulation(const QString& message)
 {
     ui->nextActivityButton->setEnabled(false);
 
+    // Compute overall score
     int score =
         stats.health +
         stats.energy +
@@ -95,6 +149,7 @@ void SimulationWindow::finishSimulation(const QString& message)
     else
         rating = "Unsustainable schedule.";
 
+    // Generate improvement suggestions
     QString suggestions;
 
     if (stats.sleep < 40)
@@ -112,6 +167,7 @@ void SimulationWindow::finishSimulation(const QString& message)
     if (suggestions.isEmpty())
         suggestions = "No major issues detected.";
 
+    // Build final report
     QString report =
         message + "\n\n"
         "Final Stats\n"
@@ -126,8 +182,18 @@ void SimulationWindow::finishSimulation(const QString& message)
     ui->resultLabel->setText(report);
 }
 
+/*
+ * Advances simulation to the next activity.
+ *
+ * Handles:
+ *  - Applying activity effects
+ *  - Triggering decision events (interactive)
+ *  - Triggering random events (non-interactive)
+ *  - Checking survival conditions
+ */
 void SimulationWindow::onNextActivityClicked()
 {
+    // End condition
     if (currentIndex >= static_cast<int>(schedule.activities.size())) {
         finishSimulation("You survived the full schedule. You win!");
         return;
@@ -135,84 +201,91 @@ void SimulationWindow::onNextActivityClicked()
 
     const Activity& activity = schedule.activities[currentIndex];
 
+    // 1️⃣ Apply base activity effects
     engine.runActivity(stats, activity);
+    updateStatsDisplay();
 
-// 1️⃣ Try decision event first
+    // 2️⃣ Try decision event
     DecisionEvent* decision = engine.getDecisionEvent(activity);
 
     if (decision != nullptr)
     {
         DecisionCard* card = new DecisionCard(*decision, this);
 
-        // center it (important)
+        // center the card
         card->move(width()/2 - 150, height()/2 - 100);
         card->show();
 
-        // disable next button while choosing
+        // disable button while choosing
         ui->nextActivityButton->setEnabled(false);
 
         connect(card, &DecisionCard::decisionMade, this,
         [this, card, activity](const DecisionOption& option)
         {
-        engine.applyDecision(stats, option);
-        updateStatsDisplay();
+            // Apply decision
+            engine.applyDecision(stats, option);
+            updateStatsDisplay();
 
-        card->deleteLater();
+            card->deleteLater();
+            ui->nextActivityButton->setEnabled(true);
 
-        // re-enable button after choice
-        ui->nextActivityButton->setEnabled(true);
+            // 👉 AFTER decision, also run random event
+            QString eventMessage = engine.runRandomEvent(stats, activity);
 
-        // check alive and advance only after decision resolves
-        if (!stats.isAlive()) {
-            finishSimulation("Your stats dropped too low. You lost the simulation.");
-            ui->currentActivityLabel->setText(
-                "Failed during: " + QString::fromStdString(activity.name));
-            return;
-        }
+            if (!eventMessage.isEmpty())
+            {
+                QMessageBox::information(this, "Event", eventMessage);
+            }
 
-        currentIndex++;
+            // Check survival
+            if (!stats.isAlive()) {
+                finishSimulation("Your stats dropped too low. You lost the simulation.");
+                ui->currentActivityLabel->setText(
+                    "Failed during: " + QString::fromStdString(activity.name));
+                return;
+            }
 
-        if (currentIndex >= static_cast<int>(schedule.activities.size())) {
-            ui->currentActivityLabel->setText("Schedule complete.");
-            finishSimulation("You survived the full schedule. You win!");
-            return;
-        }
+            // Move to next activity
+            currentIndex++;
 
-        updateActivityDisplay();
+            if (currentIndex >= static_cast<int>(schedule.activities.size())) {
+                ui->currentActivityLabel->setText("Schedule complete.");
+                finishSimulation("You survived the full schedule. You win!");
+                return;
+            }
+
+            updateActivityDisplay();
         });
+
+        return; // IMPORTANT: stop here so we don’t double-run
     }
-    else
+
+    // 3️⃣ No decision → run random event
+    QString eventMessage = engine.runRandomEvent(stats, activity);
+
+    if (!eventMessage.isEmpty())
     {
-        // 2️⃣ Otherwise try random event
-        QString eventMessage = engine.runRandomEvent(stats, activity);
-
-        if (!eventMessage.isEmpty())
-        {
-            QMessageBox::information(this, "Event", eventMessage);
-        }
-
-        updateStatsDisplay();
-
-        if (!stats.isAlive()) {
-
-            finishSimulation("Your stats dropped too low. You lost the simulation.");
-
-            ui->currentActivityLabel->setText(
-                "Failed during: " + QString::fromStdString(activity.name));
-
-            return;
-        }
-
-        currentIndex++;
-
-        if (currentIndex >= static_cast<int>(schedule.activities.size())) {
-
-            ui->currentActivityLabel->setText("Schedule complete.");
-            finishSimulation("You survived the full schedule. You win!");
-
-            return;
-        }
-
-        updateActivityDisplay();
+        QMessageBox::information(this, "Event", eventMessage);
     }
+
+    updateStatsDisplay();
+
+    // Check survival
+    if (!stats.isAlive()) {
+        finishSimulation("Your stats dropped too low. You lost the simulation.");
+        ui->currentActivityLabel->setText(
+            "Failed during: " + QString::fromStdString(activity.name));
+        return;
+    }
+
+    // Move forward
+    currentIndex++;
+
+    if (currentIndex >= static_cast<int>(schedule.activities.size())) {
+        ui->currentActivityLabel->setText("Schedule complete.");
+        finishSimulation("You survived the full schedule. You win!");
+        return;
+    }
+
+    updateActivityDisplay();
 }

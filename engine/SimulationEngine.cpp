@@ -1,14 +1,37 @@
+/*
+ * SimulationEngine.cpp
+ *
+ * This file implements the core simulation logic.
+ *
+ * Responsibilities:
+ *  - Determine when decision events occur
+ *  - Apply decision outcomes to stats
+ *  - Trigger and process random events
+ *  - Apply base effects of activities
+ *
+ * Design:
+ *  - Uses weighted random selection for events
+ *  - Separates decision events (interactive) and random events (automatic)
+ *  - All stat changes are applied through a centralized system
+ */
+
 #include "SimulationEngine.h"
 #include "RandomEvent.h"
 
 #include <vector>
 #include <cstdlib>
-
 #include <map>
-#include <vector>
-#include "RandomEvent.h"
 #include <QMessageBox>
 
+/*
+ * Maps each ActivityType to a list of possible decision events.
+ *
+ * Each event includes:
+ *  - Description
+ *  - Two options (left/right)
+ *  - Weight (selection probability)
+ *  - Rarity
+ */
 std::map<ActivityType, std::vector<DecisionEvent>> decisionEvents =
 {
     {ActivityType::Class,
@@ -173,6 +196,15 @@ std::map<ActivityType, std::vector<DecisionEvent>> decisionEvents =
     }}
 };
 
+
+/*
+ * Maps each ActivityType to a list of random events.
+ *
+ * These events:
+ *  - Occur automatically (no user input)
+ *  - Modify stats directly
+ *  - Use weight + rarity for selection
+ */
 std::map<ActivityType, std::vector<RandomEvent>> events =
 {
     {ActivityType::Class,
@@ -262,7 +294,11 @@ std::map<ActivityType, std::vector<RandomEvent>> events =
         {"A perfect reset.", 0, 10, 8, -8, 0, 2, Rarity::Legendary}
     }}
 };
-
+/*
+ * Converts rarity level into probability threshold.
+ *
+ * Used to filter which events are eligible before selection.
+ */
 int rarityChance(Rarity r)
 {
     switch (r)
@@ -274,9 +310,18 @@ int rarityChance(Rarity r)
     return 0;
 }
 
-// =======================
-// DECISION EVENT LOGIC
-// =======================
+/*
+ * Selects a decision event for a given activity.
+ *
+ * Logic:
+ *  - 15% chance to trigger a decision event
+ *  - If triggered:
+ *      • Select based on weighted probability
+ *
+ * Returns:
+ *  - Pointer to selected DecisionEvent
+ *  - nullptr if no event is triggered
+ */
 DecisionEvent* SimulationEngine::getDecisionEvent(const Activity& activity)
 {
     auto it = decisionEvents.find(activity.type);
@@ -289,7 +334,7 @@ DecisionEvent* SimulationEngine::getDecisionEvent(const Activity& activity)
     if (list.empty())
         return nullptr;
 
-    // 15% chance decision event
+    // Only 15% chance of triggering a decision
     if (rand() % 100 > 15)
         return nullptr;
 
@@ -310,9 +355,11 @@ DecisionEvent* SimulationEngine::getDecisionEvent(const Activity& activity)
     return nullptr;
 }
 
-// =======================
-// APPLY DECISION
-// =======================
+/*
+ * Applies the selected decision option to the player's stats.
+ *
+ * Each stat is updated directly, then clamped to valid bounds.
+ */
 void SimulationEngine::applyDecision(Stats& stats, const DecisionOption& option)
 {
     stats.health += option.health;
@@ -324,9 +371,19 @@ void SimulationEngine::applyDecision(Stats& stats, const DecisionOption& option)
     stats.clamp();
 }
 
-// =======================
-// RANDOM EVENT LOGIC
-// =======================
+/*
+ * Executes a random event for the given activity.
+ *
+ * Logic:
+ *  - 40% chance nothing happens
+ *  - Filter events based on rarity probability
+ *  - Select event using weighted random selection
+ *  - Apply stat changes
+ *
+ * Returns:
+ *  - Event description (if triggered)
+ *  - Empty string if no event occurs
+ */
 QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
 {
     auto it = events.find(activity.type);
@@ -339,11 +396,11 @@ QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
     if (list.empty())
         return "";
 
-    // 40% nothing happens
+    // 40% chance nothing happens
     if (rand() % 100 < 40)
         return "";
 
-    // filter by rarity
+    // Filter events based on rarity probability
     std::vector<RandomEvent> valid;
 
     for (const auto& e : list)
@@ -368,6 +425,7 @@ QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
 
         if (roll < cumulative)
         {
+            // Apply stat effects
             stats.health += e.health;
             stats.energy += e.energy;
             stats.attention += e.attention;
@@ -383,9 +441,14 @@ QString SimulationEngine::runRandomEvent(Stats& stats, const Activity& activity)
     return "";
 }
 
-// =======================
-// ACTIVITY BASE EFFECT
-// =======================
+/*
+ * Applies base effects of an activity over its duration.
+ *
+ * Duration (in hours) is calculated as:
+ *  endHour - startHour
+ *
+ * Each activity type modifies stats differently.
+ */
 void SimulationEngine::runActivity(Stats& stats, const Activity& activity)
 {
     int h = activity.endHour - activity.startHour;
