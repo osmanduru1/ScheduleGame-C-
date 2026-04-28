@@ -128,6 +128,8 @@ private:
      */
     void setupUiData();
 
+    void loadHardModeSchedule();
+
     /*
      * Converts string from UI into ActivityType enum.
      */

@@ -148,6 +148,13 @@
      </widget>
     </item>
 
+    <item>
+    <widget class="QPushButton" name="hardModeButton">
+    <property name="text">
+    <string>Load Hard Mode Schedule</string>
+    </property>
+    </widget>
+    </item>
    </layout>
   </widget>
  </widget>

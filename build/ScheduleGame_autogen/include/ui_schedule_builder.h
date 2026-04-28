@@ -49,6 +49,7 @@ public:
     QTableWidget *scheduleTable;
     QPushButton *deleteActivityButton;
     QPushButton *startSimulationButton;
+    QPushButton *hardModeButton;
 
     void setupUi(QMainWindow *ScheduleBuilderWindow)
     {
@@ -158,6 +159,11 @@ public:
 
         verticalLayout->addWidget(startSimulationButton);
 
+        hardModeButton = new QPushButton(centralwidget);
+        hardModeButton->setObjectName("hardModeButton");
+
+        verticalLayout->addWidget(hardModeButton);
+
         ScheduleBuilderWindow->setCentralWidget(centralwidget);
 
         retranslateUi(ScheduleBuilderWindow);
@@ -179,6 +185,7 @@ public:
         listLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Your Schedule:", nullptr));
         deleteActivityButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Delete Selected Activity", nullptr));
         startSimulationButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Start Simulation", nullptr));
+        hardModeButton->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Load Hard Mode Schedule", nullptr));
     } // retranslateUi
 
 };

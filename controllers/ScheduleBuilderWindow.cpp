@@ -68,6 +68,9 @@ ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
     connect(ui->dayComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
         this, &ScheduleBuilderWindow::onDayChanged);
 
+    connect(ui->hardModeButton, &QPushButton::clicked,
+        this, &ScheduleBuilderWindow::loadHardModeSchedule);
+        
     updateRemainingHours();
 }
 
@@ -350,6 +353,83 @@ void ScheduleBuilderWindow::onStartSimulationClicked()
 
     simulationWindow = new SimulationWindow(combined, this);
     simulationWindow->show();
+}
+
+void ScheduleBuilderWindow::loadHardModeSchedule()
+{
+    for (int day = 0; day < 7; day++)
+    {
+        auto& sched = weekSchedules[day];
+        sched.activities.clear();
+
+        // ---------- MONDAY / TUESDAY ----------
+        if (day == 0 || day == 1)
+        {
+            sched.addActivity(Activity("Morning Class", ActivityType::Class, 8, 10));
+            sched.addActivity(Activity("Study Block", ActivityType::Study, 10, 13));
+            sched.addActivity(Activity("Meal", ActivityType::Meal, 13, 14));
+            sched.addActivity(Activity("Work Shift", ActivityType::Work, 14, 18));
+            sched.addActivity(Activity("Dinner", ActivityType::Meal, 18, 19));
+            sched.addActivity(Activity("Evening Study", ActivityType::Study, 19, 22));
+            sched.addActivity(Activity("Break", ActivityType::Break, 22, 23));
+        }
+
+        // ---------- WEDNESDAY ----------
+        else if (day == 2)
+        {
+            sched.addActivity(Activity("Class Marathon", ActivityType::Class, 8, 12));
+            sched.addActivity(Activity("Quick Meal", ActivityType::Meal, 12, 13));
+            sched.addActivity(Activity("Study", ActivityType::Study, 13, 17));
+            sched.addActivity(Activity("Work", ActivityType::Work, 17, 21));
+            sched.addActivity(Activity("Late Study", ActivityType::Study, 21, 23));
+        }
+
+        // ---------- THURSDAY ----------
+        else if (day == 3)
+        {
+            sched.addActivity(Activity("Class", ActivityType::Class, 8, 11));
+            sched.addActivity(Activity("Study", ActivityType::Study, 11, 14));
+            sched.addActivity(Activity("Meal", ActivityType::Meal, 14, 15));
+            sched.addActivity(Activity("Work", ActivityType::Work, 15, 20));
+            sched.addActivity(Activity("Night Study", ActivityType::Study, 20, 23));
+        }
+
+        // ---------- FRIDAY (PEAK BURNOUT) ----------
+        else if (day == 4)
+        {
+            sched.addActivity(Activity("Class", ActivityType::Class, 8, 10));
+            sched.addActivity(Activity("Study", ActivityType::Study, 10, 14));
+            sched.addActivity(Activity("Meal", ActivityType::Meal, 14, 15));
+            sched.addActivity(Activity("Work (Long Shift)", ActivityType::Work, 15, 22));
+        }
+
+        // ---------- SATURDAY (PARTIAL RECOVERY) ----------
+        else if (day == 5)
+        {
+            sched.addActivity(Activity("Sleep In", ActivityType::Sleep, 8, 12));
+            sched.addActivity(Activity("Meal", ActivityType::Meal, 12, 13));
+            sched.addActivity(Activity("Light Exercise", ActivityType::Exercise, 13, 15));
+            sched.addActivity(Activity("Break", ActivityType::Break, 15, 18));
+            sched.addActivity(Activity("Casual Study", ActivityType::Study, 18, 21));
+        }
+
+        // ---------- SUNDAY (RESET DAY) ----------
+        else if (day == 6)
+        {
+            sched.addActivity(Activity("Sleep", ActivityType::Sleep, 8, 13));
+            sched.addActivity(Activity("Meal", ActivityType::Meal, 13, 14));
+            sched.addActivity(Activity("Relax", ActivityType::Break, 14, 18));
+            sched.addActivity(Activity("Prep Study", ActivityType::Study, 18, 21));
+        }
+
+        // ---------- EVERY DAY: SPLIT SLEEP ----------
+        // IMPORTANT: must split across midnight
+        sched.addActivity(Activity("Sleep (Late)", ActivityType::Sleep, 23, 24));
+        sched.addActivity(Activity("Sleep (Early)", ActivityType::Sleep, 0, 5));
+    }
+
+    rebuildTableForDay(currentDay);
+    updateRemainingHours();
 }
 
 /*
