@@ -84,8 +84,8 @@ clean: CMakeFiles/ScheduleGame_autogen.dir/clean
 # Target rules for target CMakeFiles/ScheduleGame.dir
 
 # All Build rule for target.
-CMakeFiles/ScheduleGame.dir/all: CMakeFiles/ScheduleGame_autogen_timestamp_deps.dir/all
 CMakeFiles/ScheduleGame.dir/all: CMakeFiles/ScheduleGame_autogen.dir/all
+CMakeFiles/ScheduleGame.dir/all: CMakeFiles/ScheduleGame_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScheduleGame.dir/build.make CMakeFiles/ScheduleGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScheduleGame.dir/build.make CMakeFiles/ScheduleGame.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target ScheduleGame"
@@ -103,8 +103,8 @@ ScheduleGame: CMakeFiles/ScheduleGame.dir/rule
 .PHONY : ScheduleGame
 
 # codegen rule for target.
-CMakeFiles/ScheduleGame.dir/codegen: CMakeFiles/ScheduleGame_autogen_timestamp_deps.dir/all
 CMakeFiles/ScheduleGame.dir/codegen: CMakeFiles/ScheduleGame_autogen.dir/all
+CMakeFiles/ScheduleGame.dir/codegen: CMakeFiles/ScheduleGame_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScheduleGame.dir/build.make CMakeFiles/ScheduleGame.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target ScheduleGame"
 .PHONY : CMakeFiles/ScheduleGame.dir/codegen

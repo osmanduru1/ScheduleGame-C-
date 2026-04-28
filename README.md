@@ -1,6 +1,6 @@
 # ScheduleGame
 
-**Authors:** Ozzy and Suyash  
+**Authors:** Osman and Suyash and Ibrahim
 **Date:** April 2026  
 **Course:** SOFTWARE SYSTEMS DEVELOPMENT W/LAB
 
