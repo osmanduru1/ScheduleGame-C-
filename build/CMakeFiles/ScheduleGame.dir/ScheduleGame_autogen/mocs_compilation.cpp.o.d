@@ -1142,10 +1142,53 @@ CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/q20algorithm.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/moc_SimulationWindow.cpp \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/SimulationWindow.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextdocument.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../models/Stats.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/SimulationEngine.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/../models/Schedule.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/../models/Stats.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/RandomEvent.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/DecisionEvent.h
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/7CL2LH2DRO/../../../controllers/../engine/DecisionEvent.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextcursor.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/BCDQH4B662/moc_DecisionCard.cpp \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/BCDQH4B662/../../../engine/DecisionCard.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QPoint \
+  /opt/homebrew/lib/QtGui.framework/Headers/QMouseEvent \
+  /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreevent.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qbasictimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qeventloop.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qeventpoint.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qvector2d.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qvectornd.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpointingdevice.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qinputdevice.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qscreen.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QList \
+  /opt/homebrew/lib/QtCore.framework/Headers/QObject \
+  /opt/homebrew/lib/QtCore.framework/Headers/QRect \
+  /opt/homebrew/lib/QtCore.framework/Headers/QSize \
+  /opt/homebrew/lib/QtCore.framework/Headers/QSizeF \
+  /opt/homebrew/lib/QtGui.framework/Headers/QTransform \
+  /opt/homebrew/lib/QtCore.framework/Headers/qnativeinterface.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qscreen_platform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/BCDQH4B662/../../../engine/DecisionEvent.h

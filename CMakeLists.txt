@@ -20,6 +20,10 @@ qt_add_executable(ScheduleGame
 
     engine/SimulationEngine.cpp
     engine/SimulationEngine.h
+    engine/DecisionCard.cpp
+    engine/DecisionCard.h
+    engine/DecisionEvent.h
+    engine/RandomEvent.h
 
     models/Activity.cpp
     models/Activity.h

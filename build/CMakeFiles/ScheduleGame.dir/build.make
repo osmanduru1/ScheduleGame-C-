@@ -149,10 +149,24 @@ CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp -o CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.s
 
+CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
+CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp
+CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o -MF CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o.d -o CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp
+
+CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp > CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i
+
+CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp -o CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s
+
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp
 
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.i: cmake_force
@@ -166,7 +180,7 @@ CMakeFiles/ScheduleGame.dir/models/Activity.cpp.s: cmake_force
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp
 
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.i: cmake_force
@@ -180,7 +194,7 @@ CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.s: cmake_force
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp
 
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.i: cmake_force
@@ -198,6 +212,7 @@ ScheduleGame_OBJECTS = \
 "CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o" \
 "CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o" \
 "CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o" \
+"CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o" \
 "CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o" \
 "CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o" \
 "CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o"
@@ -210,6 +225,7 @@ ScheduleGame: CMakeFiles/ScheduleGame.dir/Main.cpp.o
 ScheduleGame: CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o
 ScheduleGame: CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o
 ScheduleGame: CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o
+ScheduleGame: CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o
 ScheduleGame: CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o
 ScheduleGame: CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o
 ScheduleGame: CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o
@@ -218,7 +234,7 @@ ScheduleGame: /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets
 ScheduleGame: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 ScheduleGame: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 ScheduleGame: CMakeFiles/ScheduleGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ScheduleGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ScheduleGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ScheduleGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

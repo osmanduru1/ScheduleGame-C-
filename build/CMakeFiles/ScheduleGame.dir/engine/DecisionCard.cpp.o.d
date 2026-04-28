@@ -1,8 +1,8 @@
-CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h \
+CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o: \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtguiglobal.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qglobal.h \
@@ -858,7 +858,6 @@ CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qtguiexports.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qwindowdefs.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qnamespace.h \
@@ -1133,11 +1132,6 @@ CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qcursor.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qbitmap.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../models/Schedule.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../models/Activity.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
@@ -1145,69 +1139,40 @@ CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextdocument.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../models/Stats.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/SimulationEngine.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/../models/Schedule.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/../models/Stats.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/RandomEvent.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QString \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/../engine/DecisionEvent.h \
-  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/include/ui_schedule_builder.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QPoint \
+  /opt/homebrew/lib/QtGui.framework/Headers/QMouseEvent \
+  /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcoreevent.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qbasictimer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qeventloop.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qeventpoint.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qvector2d.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qvectornd.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpointingdevice.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qinputdevice.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qscreen.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QList \
+  /opt/homebrew/lib/QtCore.framework/Headers/QObject \
+  /opt/homebrew/lib/QtCore.framework/Headers/QRect \
+  /opt/homebrew/lib/QtCore.framework/Headers/QSize \
+  /opt/homebrew/lib/QtCore.framework/Headers/QSizeF \
+  /opt/homebrew/lib/QtGui.framework/Headers/QTransform \
   /opt/homebrew/lib/QtCore.framework/Headers/qnativeinterface.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qscreen_platform.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyleoption.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qvalidator.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qslider.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractslider.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qabstractitemmodel.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QFormLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qformlayout.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLayout \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionEvent.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QHeaderView \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qheaderview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qitemselectionmodel.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextcursor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtableview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout

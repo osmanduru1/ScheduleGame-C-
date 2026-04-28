@@ -251,6 +251,30 @@ controllers/SimulationWindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScheduleGame.dir/build.make CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.s
 .PHONY : controllers/SimulationWindow.cpp.s
 
+engine/DecisionCard.o: engine/DecisionCard.cpp.o
+.PHONY : engine/DecisionCard.o
+
+# target to build an object file
+engine/DecisionCard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScheduleGame.dir/build.make CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o
+.PHONY : engine/DecisionCard.cpp.o
+
+engine/DecisionCard.i: engine/DecisionCard.cpp.i
+.PHONY : engine/DecisionCard.i
+
+# target to preprocess a source file
+engine/DecisionCard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScheduleGame.dir/build.make CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i
+.PHONY : engine/DecisionCard.cpp.i
+
+engine/DecisionCard.s: engine/DecisionCard.cpp.s
+.PHONY : engine/DecisionCard.s
+
+# target to generate assembly for a file
+engine/DecisionCard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScheduleGame.dir/build.make CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s
+.PHONY : engine/DecisionCard.cpp.s
+
 engine/SimulationEngine.o: engine/SimulationEngine.cpp.o
 .PHONY : engine/SimulationEngine.o
 
@@ -370,6 +394,9 @@ help:
 	@echo "... controllers/SimulationWindow.o"
 	@echo "... controllers/SimulationWindow.i"
 	@echo "... controllers/SimulationWindow.s"
+	@echo "... engine/DecisionCard.o"
+	@echo "... engine/DecisionCard.i"
+	@echo "... engine/DecisionCard.s"
 	@echo "... engine/SimulationEngine.o"
 	@echo "... engine/SimulationEngine.i"
 	@echo "... engine/SimulationEngine.s"

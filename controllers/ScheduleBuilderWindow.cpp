@@ -5,6 +5,10 @@
 #include <QMessageBox>
 #include <algorithm>
 
+static const QStringList DAY_NAMES = {
+    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+};
+
 ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::ScheduleBuilderWindow),
@@ -21,6 +25,12 @@ ScheduleBuilderWindow::ScheduleBuilderWindow(QWidget *parent)
 
     connect(ui->deleteActivityButton, &QPushButton::clicked,
             this, &ScheduleBuilderWindow::onDeleteActivityClicked);
+
+    connect(ui->scheduleTable, &QTableWidget::itemSelectionChanged,
+        this, &ScheduleBuilderWindow::onTableSelectionChanged);
+
+    connect(ui->dayComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
+        this, &ScheduleBuilderWindow::onDayChanged);
 
     updateRemainingHours();
 }
@@ -41,62 +51,134 @@ void ScheduleBuilderWindow::setupUiData()
     ui->activityTypeComboBox->addItem("Sleep");
     ui->activityTypeComboBox->addItem("Exercise");
     ui->activityTypeComboBox->addItem("Break");
+    ui->scheduleTable->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    ui->scheduleTable->setSelectionBehavior(QAbstractItemView::SelectItems);
+
+    // Day dropdown
+    for (const QString& day : DAY_NAMES)
+        ui->dayComboBox->addItem(day);
 
     // Time dropdowns
     for (int h = 0; h < 24; h++)
     {
         QString time = QString("%1:00").arg(h,2,10,QChar('0'));
-
         ui->startTimeBox->addItem(time);
         ui->endTimeBox->addItem(time);
     }
 
-    // Calendar table
+    // Calendar table — 96 quarter-hour rows x 7 day columns
     ui->scheduleTable->setRowCount(96);
-    ui->scheduleTable->setColumnCount(1);
+    ui->scheduleTable->setColumnCount(7);
+    ui->scheduleTable->verticalHeader()->setDefaultSectionSize(12);
 
     QStringList timeLabels;
-
     for (int i = 0; i < 96; i++)
     {
-        int hour = i / 4;
+        int hour   = i / 4;
         int minute = (i % 4) * 15;
+        timeLabels << QString("%1:%2")
+                      .arg(hour,   2, 10, QChar('0'))
+                      .arg(minute, 2, 10, QChar('0'));
+    }
+    ui->scheduleTable->setVerticalHeaderLabels(timeLabels);
+    ui->scheduleTable->setHorizontalHeaderLabels(DAY_NAMES);
 
-        QString label =
-            QString("%1:%2")
-            .arg(hour,2,10,QChar('0'))
-            .arg(minute,2,10,QChar('0'));
+    // Resize columns evenly
+    for (int col = 0; col < 7; col++)
+        ui->scheduleTable->horizontalHeader()->setSectionResizeMode(col, QHeaderView::Stretch);
+}
 
-        timeLabels << label;
+void ScheduleBuilderWindow::onDayChanged(int dayIndex)
+{
+    currentDay = dayIndex;
+    updateRemainingHours();
+}
+
+void ScheduleBuilderWindow::rebuildTableForDay(int day)
+{
+    for (int r = 0; r < 96; r++)
+    {
+        auto* existing = ui->scheduleTable->item(r, day);
+        if (existing)
+            delete ui->scheduleTable->takeItem(r, day);
     }
 
-    ui->scheduleTable->setVerticalHeaderLabels(timeLabels);
-    ui->scheduleTable->setHorizontalHeaderLabels({"Schedule"});
-    ui->scheduleTable->horizontalHeader()->setStretchLastSection(true);
+    for (const Activity& a : weekSchedules[day].activities)
+    {
+        int startRow = a.startHour * 4;
+        int endRow   = a.endHour   * 4;
+
+        for (int r = startRow; r < endRow; r++)
+        {
+            QString text =
+                QString::fromStdString(a.name) + " | " + activityTypeToString(a.type);
+            ui->scheduleTable->setItem(r, day, new QTableWidgetItem(text));
+        }
+    }
+}
+
+void ScheduleBuilderWindow::onTableSelectionChanged()
+{
+    auto selected = ui->scheduleTable->selectedRanges();
+    if (selected.isEmpty()) return;
+
+    int topRow    = selected.first().topRow();
+    int bottomRow = selected.first().bottomRow();
+
+    int startHour = topRow / 4;
+    int endHour   = (bottomRow / 4) + 1;
+    if (endHour > 24) endHour = 24;
+
+    ui->startTimeBox->setCurrentIndex(startHour);
+    ui->endTimeBox->setCurrentIndex(endHour);
+
+    // Switch day selector to the clicked column
+    int col = selected.first().leftColumn();
+    if (col >= 0 && col < 7)
+    {
+        ui->dayComboBox->blockSignals(true);
+        ui->dayComboBox->setCurrentIndex(col);
+        ui->dayComboBox->blockSignals(false);
+        currentDay = col;
+        updateRemainingHours();
+    }
 }
 
 void ScheduleBuilderWindow::onDeleteActivityClicked()
 {
-    int row = ui->scheduleTable->currentRow();
+    auto selected = ui->scheduleTable->selectedRanges();
+    if (selected.isEmpty()) return;
 
-    if (row < 0)
-        return;
+    int col = selected.first().leftColumn();
+    int row = selected.first().topRow();
 
-    ui->scheduleTable->clearContents();
-    currentSchedule.activities.clear();
+    if (col < 0 || col >= 7) return;
 
+    int clickedHour = row / 4;
+
+    auto& daySchedule = weekSchedules[col];
+    auto it = std::find_if(
+        daySchedule.activities.begin(),
+        daySchedule.activities.end(),
+        [clickedHour](const Activity& a) {
+            return clickedHour >= a.startHour && clickedHour < a.endHour;
+        });
+
+    if (it == daySchedule.activities.end()) return;
+
+    daySchedule.activities.erase(it);
+    rebuildTableForDay(col);
     updateRemainingHours();
 }
 
 ActivityType ScheduleBuilderWindow::stringToActivityType(const QString& typeText) const
 {
-    if (typeText == "Class") return ActivityType::Class;
-    if (typeText == "Study") return ActivityType::Study;
-    if (typeText == "Work") return ActivityType::Work;
-    if (typeText == "Meal") return ActivityType::Meal;
-    if (typeText == "Sleep") return ActivityType::Sleep;
+    if (typeText == "Class")    return ActivityType::Class;
+    if (typeText == "Study")    return ActivityType::Study;
+    if (typeText == "Work")     return ActivityType::Work;
+    if (typeText == "Meal")     return ActivityType::Meal;
+    if (typeText == "Sleep")    return ActivityType::Sleep;
     if (typeText == "Exercise") return ActivityType::Exercise;
-
     return ActivityType::Break;
 }
 
@@ -104,21 +186,20 @@ QString ScheduleBuilderWindow::activityTypeToString(ActivityType type) const
 {
     switch(type)
     {
-        case ActivityType::Class: return "Class";
-        case ActivityType::Study: return "Study";
-        case ActivityType::Work: return "Work";
-        case ActivityType::Meal: return "Meal";
-        case ActivityType::Sleep: return "Sleep";
+        case ActivityType::Class:    return "Class";
+        case ActivityType::Study:    return "Study";
+        case ActivityType::Work:     return "Work";
+        case ActivityType::Meal:     return "Meal";
+        case ActivityType::Sleep:    return "Sleep";
         case ActivityType::Exercise: return "Exercise";
-        case ActivityType::Break: return "Break";
+        case ActivityType::Break:    return "Break";
     }
-
     return "Unknown";
 }
 
 void ScheduleBuilderWindow::onAddActivityClicked()
 {
-    QString name = ui->activityNameEdit->text().trimmed();
+    QString name     = ui->activityNameEdit->text().trimmed();
     QString typeText = ui->activityTypeComboBox->currentText();
 
     int start = ui->startTimeBox->currentIndex();
@@ -126,14 +207,14 @@ void ScheduleBuilderWindow::onAddActivityClicked()
 
     if (end <= start)
     {
-        QMessageBox::warning(this,"Invalid Time",
+        QMessageBox::warning(this, "Invalid Time",
                              "End hour must be after start hour.");
         return;
     }
 
     if (name.isEmpty())
     {
-        QMessageBox::warning(this,"Missing Activity Name",
+        QMessageBox::warning(this, "Missing Activity Name",
                              "Please enter an activity name.");
         return;
     }
@@ -141,35 +222,16 @@ void ScheduleBuilderWindow::onAddActivityClicked()
     ActivityType type = stringToActivityType(typeText);
     Activity activity(name.toStdString(), type, start, end);
 
-    currentSchedule.addActivity(activity);
+    auto& daySchedule = weekSchedules[currentDay];
+    daySchedule.addActivity(activity);
 
-    std::sort(currentSchedule.activities.begin(),
-              currentSchedule.activities.end(),
-              [](const Activity& a,const Activity& b)
-              {
+    std::sort(daySchedule.activities.begin(),
+              daySchedule.activities.end(),
+              [](const Activity& a, const Activity& b) {
                   return a.startHour < b.startHour;
               });
 
-    ui->scheduleTable->clearContents();
-
-    for (const Activity& a : currentSchedule.activities)
-    {
-        int startRow = a.startHour * 4;
-        int endRow   = a.endHour * 4;
-
-        for(int r=startRow;r<endRow;r++)
-        {
-            QString item =
-                QString::fromStdString(a.name) +
-                " | " +
-                activityTypeToString(a.type);
-
-            QTableWidgetItem* cell = new QTableWidgetItem(item);
-
-            ui->scheduleTable->setItem(r,0,cell);
-        }
-    }
-
+    rebuildTableForDay(currentDay);
     updateRemainingHours();
 
     ui->activityNameEdit->clear();
@@ -178,9 +240,15 @@ void ScheduleBuilderWindow::onAddActivityClicked()
 
 void ScheduleBuilderWindow::onStartSimulationClicked()
 {
-    if (currentSchedule.activities.empty())
+    // Collect all activities across all days for the simulation
+    Schedule combined;
+    for (const auto& sched : weekSchedules)
+        for (const Activity& a : sched.activities)
+            combined.addActivity(a);
+
+    if (combined.activities.empty())
     {
-        QMessageBox::warning(this,"Empty Schedule",
+        QMessageBox::warning(this, "Empty Schedule",
                              "Please add at least one activity.");
         return;
     }
@@ -188,19 +256,19 @@ void ScheduleBuilderWindow::onStartSimulationClicked()
     if (simulationWindow)
         delete simulationWindow;
 
-    simulationWindow = new SimulationWindow(currentSchedule,this);
+    simulationWindow = new SimulationWindow(combined, this);
     simulationWindow->show();
 }
 
 void ScheduleBuilderWindow::updateRemainingHours()
 {
     int total = 0;
-
-    for (const Activity& a : currentSchedule.activities)
+    for (const Activity& a : weekSchedules[currentDay].activities)
         total += (a.endHour - a.startHour);
 
     int remaining = 24 - total;
 
+    QString dayName = DAY_NAMES[currentDay];
     ui->remainingHoursLabel->setText(
-        "Remaining Hours: " + QString::number(remaining));
+        dayName + " – Remaining Hours: " + QString::number(remaining));
 }

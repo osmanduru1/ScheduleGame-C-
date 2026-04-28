@@ -564,6 +564,24 @@
 			null
 		],
 		[
+			"/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.h",
+			"MU",
+			"BCDQH4B662/moc_DecisionCard.cpp",
+			null
+		],
+		[
+			"/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionEvent.h",
+			"MU",
+			"BCDQH4B662/moc_DecisionEvent.cpp",
+			null
+		],
+		[
+			"/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h",
+			"MU",
+			"BCDQH4B662/moc_RandomEvent.cpp",
+			null
+		],
+		[
 			"/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.h",
 			"MU",
 			"BCDQH4B662/moc_SimulationEngine.cpp",
@@ -659,6 +677,11 @@
 		],
 		[
 			"/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp",
 			"MU",
 			null
 		],

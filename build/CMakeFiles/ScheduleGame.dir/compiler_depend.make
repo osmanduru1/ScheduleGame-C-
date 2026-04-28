@@ -905,6 +905,8 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.h \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp \
+  /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionEvent.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp \
@@ -915,6 +917,12 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.h \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp \
   /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QList \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QObject \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QPoint \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QRect \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QSize \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QSizeF \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QString \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
@@ -925,6 +933,7 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qabstracteventdispatcher.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qalloc.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
@@ -935,6 +944,7 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qatomic.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qatomic_cxx11.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qbindingstorage.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qbytearray.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
@@ -952,10 +962,15 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcontainerinfo.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication_platform.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcoreevent.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qendian.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qeventloop.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qflags.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qfloat16.h \
@@ -967,12 +982,14 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qiodevice.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qlist.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -982,6 +999,7 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qmetatype.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qminmax.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qnamespace.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qnativeinterface.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qnumeric.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qobject.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qobject_impl.h \
@@ -1038,38 +1056,58 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qtversionchecks.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qurl.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/QMouseEvent \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/QTransform \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qaction.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qbrush.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qcolor.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qcursor.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qevent.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qeventpoint.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qfont.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qfontinfo.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qfontmetrics.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qfontvariableaxis.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qguiapplication.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qguiapplication_platform.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qicon.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qimage.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qinputdevice.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qinputmethod.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpolygon.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qregion.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qscreen.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qscreen_platform.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qvector2d.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qvectornd.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+  /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
@@ -1508,10 +1546,6 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake:
-
 /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake:
 
 /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
@@ -1860,15 +1894,23 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/QWidget:
+
 /opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qvectornd.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qvector2d.h:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtransform.h:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qscreen.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake:
 
@@ -1880,6 +1922,8 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qregion.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h:
+
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
@@ -1890,9 +1934,15 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qinputmethod.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qinputdevice.h:
+
 /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qicon.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qguiapplication_platform.h:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
 
@@ -1902,7 +1952,13 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qfont.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qeventpoint.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qevent.h:
+
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qcolor.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/QMouseEvent:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h:
 
@@ -1911,6 +1967,8 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qvariant.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qurl.h:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qtversionchecks.h:
 
@@ -1990,6 +2048,8 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qlogging.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qlocale.h:
+
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qline.h:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargetsPrecheck.cmake:
@@ -1997,6 +2057,8 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qiodevice.h:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qhash.h:
 
@@ -2015,6 +2077,12 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qdebug.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication_platform.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication.h:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginAdditionalTargetInfo.cmake:
 
@@ -2052,6 +2120,8 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qbytearray.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h:
+
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qassert.h:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qarraydatapointer.h:
@@ -2076,6 +2146,16 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QString:
 
+/opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QSizeF:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QPoint:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QObject:
+
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qtcoreexports.h:
 
 /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp:
@@ -2091,6 +2171,8 @@ ScheduleGame_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Platf
 /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp:
 
 /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/RandomEvent.h:
+
+/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp:
 
 /opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qglobal.h:
 
@@ -2139,6 +2221,8 @@ CMakeFiles/4.3.1/CMakeSystem.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h:
 
 /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_short.h:
 
@@ -2398,6 +2482,8 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/as_const.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qpicture.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__undef_macros:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_pointer.h:
@@ -2487,6 +2573,8 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake:
 
 /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qguiapplication.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h:
 
@@ -2611,6 +2699,8 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_array.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qeventloop.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:
 
@@ -2900,6 +2990,8 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/addressof.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/qframe.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/traits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/remainder.h:
@@ -3075,6 +3167,8 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-release.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_destructible.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/QTransform:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/min.h:
 
@@ -3280,6 +3374,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets-release.cmake:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qnativeinterface.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargetsPrecheck.cmake:
@@ -3379,6 +3475,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/access.h:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qscreen_platform.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/rounding_functions.h:
 
@@ -3578,6 +3676,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_remove_copy.h:
 
+/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_sync.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/tag_types.h:
@@ -3627,6 +3727,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/regular.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QRect:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__assertion_handler:
 
@@ -3722,7 +3824,11 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/rotate.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QList:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/copy_cv.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qcoreevent.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/calendar.h:
 
@@ -3918,6 +4024,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/assume_aligned.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/qabstracteventdispatcher.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/array:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_unique_copy.h:
@@ -4058,6 +4166,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
 
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtCore.framework/Versions/A/Headers/QSize:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove_copy_if.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pstl_is_partitioned.h:
@@ -4125,6 +4235,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pstl_copy.h:
 
@@ -4203,6 +4315,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
+
+/opt/homebrew/Cellar/qtbase/6.11.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/assignable.h:
 

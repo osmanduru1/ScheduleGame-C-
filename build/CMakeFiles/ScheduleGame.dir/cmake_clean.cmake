@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o.d"
   "CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o"
   "CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o.d"
+  "CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o"
+  "CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o.d"
   "CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o"
   "CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o.d"
   "CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o"

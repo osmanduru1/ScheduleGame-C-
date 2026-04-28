@@ -20,13 +20,29 @@
     <item>
      <widget class="QLabel" name="titleLabel">
       <property name="text">
-       <string>Build Your Schedule</string>
+       <string>Build Your Weekly Schedule</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
+    <item>
+     <layout class="QHBoxLayout" name="dayLayout">
+      <item>
+       <widget class="QLabel" name="dayLabel">
+        <property name="text">
+         <string>Editing Day:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="dayComboBox"/>
+      </item>
+     </layout>
+    </item>
+
+
 
     <item>
      <layout class="QFormLayout" name="formLayout">
@@ -111,7 +127,7 @@
        <number>96</number>
       </property>
       <property name="columnCount">
-       <number>1</number>
+       <number>7</number>
       </property>
      </widget>
     </item>

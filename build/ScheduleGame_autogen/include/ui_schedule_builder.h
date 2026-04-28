@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -30,6 +31,9 @@ public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QLabel *titleLabel;
+    QHBoxLayout *dayLayout;
+    QLabel *dayLabel;
+    QComboBox *dayComboBox;
     QFormLayout *formLayout;
     QLabel *nameLabel;
     QLineEdit *activityNameEdit;
@@ -60,6 +64,21 @@ public:
         titleLabel->setAlignment(Qt::AlignCenter);
 
         verticalLayout->addWidget(titleLabel);
+
+        dayLayout = new QHBoxLayout();
+        dayLayout->setObjectName("dayLayout");
+        dayLabel = new QLabel(centralwidget);
+        dayLabel->setObjectName("dayLabel");
+
+        dayLayout->addWidget(dayLabel);
+
+        dayComboBox = new QComboBox(centralwidget);
+        dayComboBox->setObjectName("dayComboBox");
+
+        dayLayout->addWidget(dayComboBox);
+
+
+        verticalLayout->addLayout(dayLayout);
 
         formLayout = new QFormLayout();
         formLayout->setObjectName("formLayout");
@@ -125,7 +144,7 @@ public:
         scheduleTable = new QTableWidget(centralwidget);
         scheduleTable->setObjectName("scheduleTable");
         scheduleTable->setRowCount(96);
-        scheduleTable->setColumnCount(1);
+        scheduleTable->setColumnCount(7);
 
         verticalLayout->addWidget(scheduleTable);
 
@@ -149,7 +168,8 @@ public:
     void retranslateUi(QMainWindow *ScheduleBuilderWindow)
     {
         ScheduleBuilderWindow->setWindowTitle(QCoreApplication::translate("ScheduleBuilderWindow", "Schedule Builder", nullptr));
-        titleLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Build Your Schedule", nullptr));
+        titleLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Build Your Weekly Schedule", nullptr));
+        dayLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Editing Day:", nullptr));
         nameLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Activity Name:", nullptr));
         typeLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Activity Type:", nullptr));
         startLabel->setText(QCoreApplication::translate("ScheduleBuilderWindow", "Start Time:", nullptr));

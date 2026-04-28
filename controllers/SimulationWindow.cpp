@@ -1,5 +1,6 @@
 #include "SimulationWindow.h"
 #include "ui_simulation.h"
+#include "../engine/DecisionCard.h"
 
 #include <cstdlib>
 #include <ctime>
@@ -141,24 +142,44 @@ void SimulationWindow::onNextActivityClicked()
 
     if (decision != nullptr)
     {
-        QMessageBox msgBox;
-        msgBox.setWindowTitle("Decision");
-        msgBox.setText(decision->description);
+        DecisionCard* card = new DecisionCard(*decision, this);
 
-        QPushButton* leftBtn = msgBox.addButton(
-            decision->leftOption.text,
-            QMessageBox::AcceptRole);
+        // center it (important)
+        card->move(width()/2 - 150, height()/2 - 100);
+        card->show();
 
-        QPushButton* rightBtn = msgBox.addButton(
-            decision->rightOption.text,
-            QMessageBox::RejectRole);
+        // disable next button while choosing
+        ui->nextActivityButton->setEnabled(false);
 
-        msgBox.exec();
+        connect(card, &DecisionCard::decisionMade, this,
+        [this, card, activity](const DecisionOption& option)
+        {
+        engine.applyDecision(stats, option);
+        updateStatsDisplay();
 
-        if (msgBox.clickedButton() == leftBtn)
-            engine.applyDecision(stats, decision->leftOption);
-        else
-            engine.applyDecision(stats, decision->rightOption);
+        card->deleteLater();
+
+        // re-enable button after choice
+        ui->nextActivityButton->setEnabled(true);
+
+        // check alive and advance only after decision resolves
+        if (!stats.isAlive()) {
+            finishSimulation("Your stats dropped too low. You lost the simulation.");
+            ui->currentActivityLabel->setText(
+                "Failed during: " + QString::fromStdString(activity.name));
+            return;
+        }
+
+        currentIndex++;
+
+        if (currentIndex >= static_cast<int>(schedule.activities.size())) {
+            ui->currentActivityLabel->setText("Schedule complete.");
+            finishSimulation("You survived the full schedule. You win!");
+            return;
+        }
+
+        updateActivityDisplay();
+        });
     }
     else
     {
@@ -169,29 +190,29 @@ void SimulationWindow::onNextActivityClicked()
         {
             QMessageBox::information(this, "Event", eventMessage);
         }
+
+        updateStatsDisplay();
+
+        if (!stats.isAlive()) {
+
+            finishSimulation("Your stats dropped too low. You lost the simulation.");
+
+            ui->currentActivityLabel->setText(
+                "Failed during: " + QString::fromStdString(activity.name));
+
+            return;
+        }
+
+        currentIndex++;
+
+        if (currentIndex >= static_cast<int>(schedule.activities.size())) {
+
+            ui->currentActivityLabel->setText("Schedule complete.");
+            finishSimulation("You survived the full schedule. You win!");
+
+            return;
+        }
+
+        updateActivityDisplay();
     }
-
-    updateStatsDisplay();
-
-    if (!stats.isAlive()) {
-
-        finishSimulation("Your stats dropped too low. You lost the simulation.");
-
-        ui->currentActivityLabel->setText(
-            "Failed during: " + QString::fromStdString(activity.name));
-
-        return;
-    }
-
-    currentIndex++;
-
-    if (currentIndex >= static_cast<int>(schedule.activities.size())) {
-
-        ui->currentActivityLabel->setText("Schedule complete.");
-        finishSimulation("You survived the full schedule. You win!");
-
-        return;
-    }
-
-    updateActivityDisplay();
 }

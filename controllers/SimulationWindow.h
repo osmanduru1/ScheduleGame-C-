@@ -1,5 +1,6 @@
 #pragma once
-
+#include <QWidget>
+#include <QLabel>
 #include <QMainWindow>
 #include "../models/Schedule.h"
 #include "../models/Stats.h"
