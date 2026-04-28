@@ -83,127 +83,127 @@ CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o: CMakeFi
 CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o: ScheduleGame_autogen/mocs_compilation.cpp
 CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp
 
 CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp > CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp > CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp -o CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/ScheduleGame_autogen/mocs_compilation.cpp -o CMakeFiles/ScheduleGame.dir/ScheduleGame_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/ScheduleGame.dir/Main.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/Main.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp
 CMakeFiles/ScheduleGame.dir/Main.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ScheduleGame.dir/Main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/Main.cpp.o -MF CMakeFiles/ScheduleGame.dir/Main.cpp.o.d -o CMakeFiles/ScheduleGame.dir/Main.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/Main.cpp.o -MF CMakeFiles/ScheduleGame.dir/Main.cpp.o.d -o CMakeFiles/ScheduleGame.dir/Main.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp
 
 CMakeFiles/ScheduleGame.dir/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/Main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp > CMakeFiles/ScheduleGame.dir/Main.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp > CMakeFiles/ScheduleGame.dir/Main.cpp.i
 
 CMakeFiles/ScheduleGame.dir/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/Main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp -o CMakeFiles/ScheduleGame.dir/Main.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/Main.cpp -o CMakeFiles/ScheduleGame.dir/Main.cpp.s
 
 CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp
 CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o -MF CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o.d -o CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o -MF CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o.d -o CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp
 
 CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp > CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp > CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.i
 
 CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp -o CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/ScheduleBuilderWindow.cpp -o CMakeFiles/ScheduleGame.dir/controllers/ScheduleBuilderWindow.cpp.s
 
 CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp
 CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o -MF CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o.d -o CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o -MF CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o.d -o CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp
 
 CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp > CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp > CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.i
 
 CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp -o CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/controllers/SimulationWindow.cpp -o CMakeFiles/ScheduleGame.dir/controllers/SimulationWindow.cpp.s
 
 CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp
 CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o -MF CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o.d -o CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o -MF CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o.d -o CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp
 
 CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp > CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp > CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.i
 
 CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp -o CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/SimulationEngine.cpp -o CMakeFiles/ScheduleGame.dir/engine/SimulationEngine.cpp.s
 
 CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp
 CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o -MF CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o.d -o CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o -MF CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o.d -o CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp
 
 CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp > CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp > CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.i
 
 CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp -o CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/engine/DecisionCard.cpp -o CMakeFiles/ScheduleGame.dir/engine/DecisionCard.cpp.s
 
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Activity.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp
 
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/models/Activity.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp > CMakeFiles/ScheduleGame.dir/models/Activity.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp > CMakeFiles/ScheduleGame.dir/models/Activity.cpp.i
 
 CMakeFiles/ScheduleGame.dir/models/Activity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/models/Activity.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp -o CMakeFiles/ScheduleGame.dir/models/Activity.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Activity.cpp -o CMakeFiles/ScheduleGame.dir/models/Activity.cpp.s
 
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp
 
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp > CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp > CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.i
 
 CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp -o CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Schedule.cpp -o CMakeFiles/ScheduleGame.dir/models/Schedule.cpp.s
 
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o: CMakeFiles/ScheduleGame.dir/flags.make
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o: /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o: CMakeFiles/ScheduleGame.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hd/softwaresystems/finalProject/ScheduleGame-C-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o -MF CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o.d -o CMakeFiles/ScheduleGame.dir/models/Stats.cpp.o -c /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp
 
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScheduleGame.dir/models/Stats.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp > CMakeFiles/ScheduleGame.dir/models/Stats.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp > CMakeFiles/ScheduleGame.dir/models/Stats.cpp.i
 
 CMakeFiles/ScheduleGame.dir/models/Stats.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScheduleGame.dir/models/Stats.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp -o CMakeFiles/ScheduleGame.dir/models/Stats.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hd/softwaresystems/finalProject/ScheduleGame-C-/models/Stats.cpp -o CMakeFiles/ScheduleGame.dir/models/Stats.cpp.s
 
 # Object files for target ScheduleGame
 ScheduleGame_OBJECTS = \
