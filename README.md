@@ -191,10 +191,3 @@ score = health + energy + attention + sleep − stress
 
 See `UML.md` in this repository for the full class diagram.
 
----
-
-## License
-
-This project was developed as a course assignment and is intended for educational use.
-READMEEOF
-echo done
